@@ -1,6 +1,6 @@
-# Untitled
+# Right Fit Tailoring
 
-The deployed site can be viewed [here](#)
+Right Fit Tailoring is a full service bespoke tailoring company that offers ready made men's fashion items and accessories as well as made to measure and alteration services. This application is their online store that customers can use to buy items, order made to measure and purchase alteration services. The deployed site can be viewed [here](#)
 
 ![mockup](#)
 
@@ -25,15 +25,16 @@ User stories regarding the application in general:
     - have a clear idea of what the site sells or does
     - easily navigate the site and any information within it
     - be able to easily add and remove items from the shopping cart
-    - see the sopping cart total at all times
+    - easily understand what measurements are needed for the 'made to measure' service
+    - see the shopping cart total at all times
     - be confident that I can checkout securely
     - register for an account
     - be able to contact the site owner/administrator with any queries
   - As a registered user, I want to -
-    - save my delivery information for future use
-    - be able to edit this information if I were to move, or want it shipped to a different location
+    - save my delivery information for future use, and edit when necessary
+    - save my measurements for future use, and edit when necessary
     - see my previous orders
-    - be able to add items to a wishlist so I can come back to them later
+    - be able to add items to a wish list so I can come back to them later
     - be able to delete my account and all personal details if necessary
   - As the site owner/administrator, I want to -
     - add new items to the site
