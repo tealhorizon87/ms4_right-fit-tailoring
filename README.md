@@ -20,34 +20,68 @@ Right Fit Tailoring is a full service bespoke tailoring company that offers read
 ## UX
 
 ### User Stories
-User stories regarding the application in general:
-  - As a new user, I want to -
+General User Stories:
+  - As a user, I want to -
     - have a clear idea of what the site sells or does
     - easily navigate the site and any information within it
-    - be able to easily add and remove items from the shopping cart
-    - easily understand what measurements are needed for the 'made to measure' service
     - see the shopping cart total at all times
-    - be confident that I can checkout securely
     - register for an account
-    - be able to contact the site owner/administrator with any queries
-
-User stories regarding the profile application:
-  - As a registered user, I want to -
-    - save my delivery information for future use, and edit when necessary
-    - save my measurements for future use, and edit when necessary
-    - see my previous orders
-    - be able to add items to a wish list so I can come back to them later
-    - be able to delete my account and all personal details if necessary
-
-User stories relating to the owner:
   - As the site owner/administrator, I want to -
     - add new items to the site
     - edit and remove items that are already on the site
     - add discounts or deals to items or groups of items
     - view orders such that they can be easily fulfilled
 
+Shopping Cart app user stories:
+  - As a user, I want to -
+  	- be able to easily add and remove items from the shopping cart
+  	- see the shopping cart total at all times
+  	- see a breakdown of costs for each item in the cart before the checkout
+  	- see if there is an extra charge for delivery, and be told how to reduce it
+  	- have the option to go back to the store if I'm not ready to checkout
+
+Checkout add user stories:
+  - As a user, I want to -
+    - be confident that I can checkout securely
+    - clearly see what will be charged before submitting the form
+    - be able to save my details for future use if registered
+
+Profile app user stories:
+  - As a registered user, I want to -
+    - save my delivery information for future use, and edit when necessary
+    - save my measurements for future use, and edit when necessary
+    - see my previous orders
+    - be able to delete my account and all personal details if necessary
+
+Wish list app user stories:
+  - As a registered user, I want to -
+    - be able to add and remove items to a wish list
+    - be able to have more than one wish list at a time
+    - be able to see what the total cost of the items in the wish list is
+    - be able to add items to the shopping cart directly from the wish list
+
 ### Design
-This application is an e-commerce store utilising the [Django](https://www.djangoproject.com/) framework for functionality, and [Stripe](https://stripe.com/) for payment processing. The site is useable by both registered and unregistered users, with certain features only available to registered users. For those who register, there is a profile page where the user can view their default contact and delivery details along with their order history, and an application where they can add items to a wish list and save that list to be viewed later. This is also where the user can view and alter their default measurements for the made to measure service. It is possible to have multiple wish lists for each registered user.
+This application is an e-commerce store utilising the [Django](https://www.djangoproject.com/) framework for functionality, and [Stripe](https://stripe.com/) for payment processing. The site is useable by both registered and unregistered users, with certain features only available to registered users. Functionality for the site is broken into several apps:
+
+#### Home
+  - The home app contains functionality for the home page, namely rendering the home page to users when they enter the site.
+
+#### Products
+  - The products app contains functionality concerning the products and how they are displayed to the user and the administrator. This app also contains the form for admin to add, edit or delete items from the site and all the functionality for the made to measure section as well.
+
+#### Profiles
+  - The profiles app displays the user's profile page once they have registered, the saved delivery and measurement details, and a list of the previous orders of the user. This app also contains the function to delete the user's profile when they wish it.
+
+#### Cart
+  - The cart app concerns itself with displaying the shopping cart to the user and the functionality for adding and removing items to the cart.
+
+#### Checkout
+  - The checkout app contains the forms and models required to create an order, both to be displayed to the user and to the administrator, all the stripe functionality to process payment and systems to protect that function.
+
+#### Wish list
+  - The wish list app allows users to set up multiple wish lists, add and remove items to said wish lists, and display them back to the user.
+
+<br>
 
 The font families used for the application are Cinzel for the logo, Oswald for all headings, Josefin Sans for main body text, and Italianno for decorative text. All fonts have been sourced from [Google Fonts](https://fonts.google.com/).
 
@@ -76,6 +110,12 @@ Below is the link to a tabulated view of how the data is stored in the database.
 [database schema](docs/docs/database_schema.pdf)
 
 ## Features
+- A page header containing all menus, search bar and shopping cart that is present on all pages for easy navigation
+- Profile management with [django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) for users to register, log in and log out to/from their profile
+- A filtering system so that users can change the order that the product pages display the products
+- Clicking on the image of a product will direct the user to that product's page where they can view more details and add it to their cart
+- A checkbox to allow registered users to save their details at the checkout for future use
+- A wish list ability to allow users to create lists of future purchases
 
 ### Future Features
 
@@ -118,28 +158,12 @@ Back to [Table of Contents](#table-of-contents)
 
 ## Testing
 
-I have gathered all my testing data, and stored it in a separate file, which can be found [here](TESTING.md)
+I have gathered all my testing data, and stored it in a separate file, which can be found [here](#)
 
 ### Known Bugs
 
 ## Deployment
 ### Heroku
-Deployment for this project is via [Heroku](https://www.heroku.com).
-1. Create a requirements.txt file by typing pip3 freeze --local > requirements.txt in your repository terminal
-2. Create a Procfile so that Heroku knows how to run the app. Do this by typing echo web: python app.py into your repositories terminal
-3. Make sure these files have been pushed to the GitHub repository and then navigate to [Heroku](https://www.heroku.com)
-4. Log in and select 'new' in the top right, name your app and choose a region that is closest to you. The app name must be unique.
-5. On the dashboard for your app, select the 'Deploy' tab and under deployment method, select GitHub (the easiest option if your repository is in GitHub)
-6. Enter the repository name underneath that and hit search. select the repository by clicking 'Connect'
-7. You can either select Automatic or Manual deployment depending on your method. This project has been deployed with the manual method. Remember that if you choose manual, then every time the main/master branch is changed, you will need to re-deploy the app.
-8. Next, go to the 'Settings' tab and select 'Reveal Config Vars'
-9. Here you need to add several KEY: VALUE pairs for the app to run. They are
-  - I.P: 0.0.0.0
-  - PORT: 5000
-  - MONGO_DBNAME: *database name*
-  - MONGO_URI: *MongoDB URI, taken from the connections section of the database*
-  - SECRET_KEY: *secret key of your choice*
-10. Once these KEY: VALUE pairs have been added, the app will be reachable from the [Heroku](https://www.heroku.com) portal
 
 ### Forking the Repository
 If you would like to view/change the code for the project then you can copy this repository to your GitHub account by forking it. You will then be able to do this without affecting the original repository:
@@ -162,7 +186,7 @@ Back to [Table of Contents](#table-of-contents)
 ## Credits
 
 ### Content
-  - All code was written by myself or taken from the materialize documentation (with one exception; see below), with inspiration taken from the Code Institute walkthrough projects
+  - All code was written by myself or taken from the [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) documentation, with inspiration taken from the Code Institute walkthrough projects
 
 ### Acknowledgements
   - Thanks to my mentor for help, guidance and support during this project as always
