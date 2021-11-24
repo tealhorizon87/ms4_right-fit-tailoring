@@ -1,0 +1,130 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "shirts",
+            "friendly_name": "Shirts"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "trousers",
+            "friendly_name": "Trousers"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "jackets",
+            "friendly_name": "Jackets"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "waistcoats",
+            "friendly_name": "Waistcoats"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "shorts",
+            "friendly_name": "Shorts"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "suits",
+            "friendly_name": "Suits"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "coats",
+            "friendly_name": "Coats"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "cufflinks",
+            "friendly_name": "Cufflinks"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "ties",
+            "friendly_name": "Ties"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "braces",
+            "friendly_name": "Braces"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+            "name": "belts",
+            "friendly_name": "Belts"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+            "name": "shirt_material",
+            "friendly_name": "Shirting Material"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.category",
+        "fields": {
+            "name": "suit_material",
+            "friendly_name": "Suit Material"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.category",
+        "fields": {
+            "name": "bottoms_material",
+            "friendly_name": "Trousers & Shorts Material"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.category",
+        "fields": {
+            "name": "coat_material",
+            "friendly_name": "Coat Material"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.category",
+        "fields": {
+            "name": "linings",
+            "friendly_name": "Linings"
+        }
+    }
+]
