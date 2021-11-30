@@ -24,12 +24,12 @@
   <body>
     <header class="container-fliud fixed-top">
       <div class="row">
-        <div class="col col-lg-4 text-lg-left my-auto">
-          <a href="{% url 'home' %}" class="nav-link">
+        <div class="col col-9 col-sm-8 col-md-4 text-lg-left my-auto p-0">
+          <a href="{% url 'home' %}" class="nav-link pr-0">
             <h1>Right Fit Tailoring</h1>
           </a>
         </div>
-        <div class="col col-lg-4 my-auto">
+        <div class="col col-lg-4 my-auto d-none d-md-block">
           <form>
             <div class="input-group w-100">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
@@ -41,10 +41,10 @@
             </div>
           </form>
         </div>
-        <div class="col col-lg-4 my-auto">
-          <ul class="list-inline text-center my-0">
-            <li class="list-inline-item">
-              <a href="#" class="nav-link">
+        <div class="col col-3 col-sm-4 my-auto">
+          <ul class="list-inline text-left text-sm-center my-0">
+            <li class="list-inline-item  d-none d-sm-inline-block">
+              <a href="#" class="nav-link p-0">
                 <div class="text-center">
                   <div><i class="fas fa-user"></i></div>
                   <p class="my-0">Log in/Register</p>
@@ -52,7 +52,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link p-0">
                 <div class="text-center">
                   <div><i class="fas fa-shopping-cart"></i></div>
                   <p class="my-0">£0.00</p>
@@ -64,7 +64,7 @@
       </div>
       <div class="row">
         <nav class="navbar navbar-expand-md w-100 mx-auto">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-bar" aria-controls="menu-bar" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#menu-bar" aria-controls="menu-bar" aria-expanded="false" aria-label="Toggle navigation">
             <p>Menu</p>
           </button>
           {% include 'includes/menu-bar.html' %}
