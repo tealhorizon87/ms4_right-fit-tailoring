@@ -1,0 +1,66 @@
+/* ---------------------------------------Custom colours */
+:root {
+  --my-grey: #9b9ca0;
+  --my-blue: #858dbe;
+  --my-white: #fafafa;
+  --my-tan: #c89f81;
+  --my-brown: #76463a;
+  --my-dark-grey: #464749;
+}
+
+/* ------------------------------------------------Fonts */
+.logo {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.fancy-font {
+  font-family: "Italianno", cursive;
+}
+
+/* -------------------------------------Background image */
+body {
+  background: url("/media/hero-lg.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 0px 120px;
+  height: calc(100vh - 152px);
+}
+
+/* ----------------------------------------Header styles */
+
+header {
+  background-color: var(--my-dark-grey);
+  color: var(--my-white);
+}
+
+header a {
+  color: var(--my-white);
+}
+
+header i {
+  color: var(--my-white);
+}
+
+.offer-banner {
+  background-color: var(--my-blue);
+}
+
+.search-bar input {
+  background-color: var(--my-grey);
+  border-color: var(--my-grey);
+}
+
+.search-bar button {
+  border-color: var(--my-grey);
+}
