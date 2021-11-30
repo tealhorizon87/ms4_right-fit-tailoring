@@ -10,10 +10,13 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
+    def cat_name(self, obj):
+        return obj.category.friendly_name
+
     list_display = (
         "product_code",
         "name",
-        "category",
+        "cat_name",
         "price",
         "image"
     )
