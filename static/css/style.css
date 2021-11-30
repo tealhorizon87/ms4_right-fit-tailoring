@@ -29,6 +29,10 @@ body {
   font-family: "Italianno", cursive;
 }
 
+.white-font {
+  color: var(--my-white);
+}
+
 /* -------------------------------------Background image */
 body {
   background: url("/media/hero-lg.jpg") no-repeat fixed;
@@ -44,14 +48,6 @@ header {
   color: var(--my-white);
 }
 
-header a {
-  color: var(--my-white);
-}
-
-header i {
-  color: var(--my-white);
-}
-
 .offer-banner {
   background-color: var(--my-blue);
 }
@@ -63,4 +59,52 @@ header i {
 
 .search-bar button {
   border-color: var(--my-grey);
+}
+
+/* ----------------------------------------Footer styles */
+footer {
+  background-color: var(--my-dark-grey);
+  color: var(--my-white);
+  min-height: 6rem;
+}
+
+footer .row {
+  min-height: 6rem;
+}
+
+/* --------------------------------------------Home page */
+.header-spacer {
+  padding-top: 300px;
+}
+
+.jumbotron {
+  position: fixed;
+}
+
+.jumbotron h2 {
+  font-size: 3rem;
+}
+
+.jumbotron p {
+  font-size: 3rem;
+}
+
+.button-box {
+  border: 1px solid var(--my-blue);
+  border-radius: 2rem;
+  background-color: var(--my-blue);
+  padding: 0.5rem 2rem;
+}
+
+/* ----------------------------------------Media Queries */
+
+/* adjust the position of background image on medium and
+smaller screens */
+@media (max-width: 767px) {
+  body {
+    background: url("/media/hero-lg.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: -450px 120px;
+    height: calc(100vh - 152px);
+  }
 }
