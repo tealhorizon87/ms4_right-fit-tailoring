@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "products.product",
         "fields": {
-            "product_code": "100100"
+            "product_code": "100100",
             "name": "Bordeaux Textured Check Shirt",
             "description": "A must-have for any man’s repertoire, this textured, checked shirt from Ben Sherman features long sleeves, a regular fit and boasts 100% cotton for supreme comfort and versatility – whatever the occasion.",
             "category": 1,
@@ -16,7 +16,7 @@
         "pk": 2,
         "model": "products.product",
         "fields": {
-            "product_code": "100101"
+            "product_code": "100101",
             "name": "Bordeaux Gradient Checked Shirt",
             "description": "From Ben Sherman, this gradient-checked shirt is a longstanding wardrobe staple featuring a regular fit and 100% cotton for comfort, breathability, and versatility.",
             "category": 1,
@@ -29,7 +29,7 @@
         "pk": 3,
         "model": "products.product",
         "fields": {
-            "product_code": "100102"
+            "product_code": "100102",
             "name": "Retro '70s Caramel Geometric Print Shirt",
             "description": "A staple garment inspired by the days of yesteryear, this ‘70s geometric shirt from Ben Sherman is cut to the brand’s slim fit and comes in 100% cotton for pure comfort and longevity. A guaranteed winner for years to come.",
             "category": 1,
@@ -42,7 +42,7 @@
         "pk": 4,
         "model": "products.product",
         "fields": {
-            "product_code": "100103"
+            "product_code": "100103",
             "name": "Long Sleeve Leston Gingham Plaid Check Shirt",
             "description": "The Leston shirt has been 30 years in the making, over the years we have tweaked and tinkered to create the perfect shirt fit that works for all occasions. The Gingham Plaid check is a modern take on a classic heritage design, the monochrome and neutrals are accented with a flash of red and blue overcheck creating a striking, visual garment. We have added a light brush to make it feel like it’s already your favourite shirt.",
             "category": 1,
@@ -55,7 +55,7 @@
         "pk": 5,
         "model": "products.product",
         "fields": {
-            "product_code": "100104"
+            "product_code": "100104",
             "name": "Long Sleeve Navy Blue Floral Print Shirt",
             "description": "Update your repertoire with the latest smart-casual shirts from Jeff Banks. Finished in a floral print, this tailored-fitting shirt features stab stitch detailing to the placket and cuffs, with contrasting fabric around the chest pocket’s edge. Style yours with jeans or suit trousers for the best in versatile dressing.",
             "category": 1,
@@ -68,7 +68,7 @@
         "pk": 6,
         "model": "products.product",
         "fields": {
-            "product_code": "100105"
+            "product_code": "100105",
             "name": "Long Sleeve Five Colour Print Paisley Shirt",
             "description": "Encompassing effortless style with supreme comfort, the Jeff Banks London smart-casual shirt collection features an assortment of carefully crafted pieces, and this blue paisley design is no exception. Featuring an under-placket construction, bold stitch detailing to the cuff and chest pockets, this is exemplary, versatile clothing at its very best.",
             "category": 1,
@@ -81,7 +81,7 @@
         "pk": 7,
         "model": "products.product",
         "fields": {
-            "product_code": "100106"
+            "product_code": "100106",
             "name": "Long Sleeve Navy Paisley Print Shirt",
             "description": "Encompassing effortless style with supreme comfort, this smart-casual shirt from Jeff Banks ticks all the right boxes. Finished in 100% cotton, this tailored piece features a micro paisley print in a muted navy with a button-down collar and half-concealed buttons for added appeal.",
             "category": 1,
@@ -94,7 +94,7 @@
         "pk": 8,
         "model": "products.product",
         "fields": {
-            "product_code": "100107"
+            "product_code": "100107",
             "name": "Long Sleeve Leston Brushed Ombre Check Shirt",
             "description": "The Leston shirt has been 30 years in the making, over the years we have tweaked and tinkered to create the perfect shirt fit that works for all occasions. The brushed ombre check is a simplified tartan check scaled up and woven using a herringbone weave. We have added a light brush to make it feel like it’s already your favourite shirt.",
             "category": 1,
@@ -107,7 +107,7 @@
         "pk": 9,
         "model": "products.product",
         "fields": {
-            "product_code": "100108"
+            "product_code": "100108",
             "name": "Wine Ditsy Shirt",
             "description": "A ditsy floral shirt in a luxurious wine red? It's got to be by Ted Baker. Styled in 100% cotton for versatility, wear this with your favourite smart trousers or casual chinos for various occasions – it’s that versatile. We’ll take two, please.",
             "category": 1,
@@ -120,7 +120,7 @@
         "pk": 10,
         "model": "products.product",
         "fields": {
-            "product_code": "100109"
+            "product_code": "100109",
             "name": "Casual Long Sleeved Multicoloured Floral Shirt",
             "description": "A contemporary piece from the original Mod brand and a cut above the rest. This long-sleeved shirt features a multicoloured floral print in Ben Sherman's regular fit and is styled with a two-finger, button-down collar - all in 100% pure cotton. An instant classic for any wardrobe.",
             "category": 1,
@@ -133,7 +133,7 @@
         "pk": 11,
         "model": "products.product",
         "fields": {
-            "product_code": "100110"
+            "product_code": "100110",
             "name": "Long Sleeve Leston Linear Tartan Shirt",
             "description": "The Leston shirt has been 30 years in the making, over the years we have tweaked and tinkered to create the perfect shirt fit that works for all occasions. Our take on the tartan we have woven it on a fine oxford cloth to give a clean, sharp appearance. The balance of navy, wine and white creates a pattern that will work back with the rest of your wardrobe with ease.",
             "category": 1,
@@ -146,7 +146,7 @@
         "pk": 12,
         "model": "products.product",
         "fields": {
-            "product_code": "100111"
+            "product_code": "100111",
             "name": "Long Sleeve Leston Winter Tattersall Shirt",
             "description": "The Leston shirt has been 30 years in the making, over the years we have tweaked and tinkered to create the perfect shirt fit that works for all occasions. This version comes in a winter Tattersall check, this iconic setting gets an update in rich deep colours. We have added a light brush to make it feel like it’s already your favourite shirt.",
             "category": 1,
@@ -159,7 +159,7 @@
         "pk": 13,
         "model": "products.product",
         "fields": {
-            "product_code": "100112"
+            "product_code": "100112",
             "name": "Grey Feather Print Shirt",
             "description": "Birds of a feather flock together, no? In 100% cotton and a slim fit, this grey feather-patterned shirt is versatile enough to wear day or night with your favourite suit or chinos. With subtle Ted Baker branding and long sleeves, what more could you want from a shirt that does all the talking?",
             "category": 1,
@@ -172,7 +172,7 @@
         "pk": 14,
         "model": "products.product",
         "fields": {
-            "product_code": "100113"
+            "product_code": "100113",
             "name": "Scattered Geo Print Shirt",
             "description": "Ben Sherman presents the very best in contemporary menswear with the latest smart-casual shirt. Shop yours at Suit Direct. In a scattered geometric print, this piece features a mod fit and two-finger collar all in 100% cotton for complete comfort and effortless style. Pair yours with chinos and trainers, or smarten up with a suit trouser.",
             "category": 1,
@@ -185,7 +185,7 @@
         "pk": 15,
         "model": "products.product",
         "fields": {
-            "product_code": "100114"
+            "product_code": "100114",
             "name": "Hand Drawn Floral Print",
             "description": "An eye-catching piece perfect for all seasons - from the original mod brand, available at Suit Direct. An abstract, hand-drawn floral print shirt from Ben Sherman, this piece is styled with a relaxed fit, short sleeves and a casual point collar in 100% cotton. Pair yours with chino shorts or jeans for an off-duty look.",
             "category": 1,
@@ -198,7 +198,7 @@
         "pk": 16,
         "model": "products.product",
         "fields": {
-            "product_code": "100115"
+            "product_code": "100115",
             "name": "Short Sleeve Floral Shirt",
             "description": "Jeff Banks London craftsmanship encompasses both sartorial style and superb comfort. This casually styled shirt features a meticulous purple and white floral design with a button-down collar for an added touch of formality. Perfect for any man’s wardrobe, this piece is styled with a half-concealed button placket and contrasting trims. A truly exemplary piece of menswear from Jeff Banks.",
             "category": 1,
@@ -211,7 +211,7 @@
         "pk": 17,
         "model": "products.product",
         "fields": {
-            "product_code": "100116"
+            "product_code": "100116",
             "name": "Blurred Floral Print Smart Casual Shirt",
             "description": "Jeff Banks London presents a stylish short sleeve shirt in a multi colour floral print design. This style features a forward point collar, jetted chest pocket and contrast fabric at the back neck.",
             "category": 1,
@@ -224,7 +224,7 @@
         "pk": 18,
         "model": "products.product",
         "fields": {
-            "product_code": "100117"
+            "product_code": "100117",
             "name": "Short Sleeve Floral Print Shirt",
             "description": "Jeff Banks London craftsmanship encompasses both sartorial style and superb comfort. This blue floral short sleeve shirt features split collar-insert detailing, a button-down chest pocket and contrasting fabric to the back neck. Perfect for any man’s wardrobe and a truly exemplary piece of menswear from Jeff Banks.",
             "category": 1,
@@ -237,7 +237,7 @@
         "pk": 19,
         "model": "products.product",
         "fields": {
-            "product_code": "100118"
+            "product_code": "100118",
             "name": "Short Sleeve Gingham Check Shirt",
             "description": "A short sleeve shirt featuring an tonal gingham in muted tones . Cut to our Union fit in our quality 100% cotton and styled with our iconic two finger button down collar, spade chest pocket and pocket tab branding. At the back is an open box pleat and locker loop in-keeping with our traditional styling.",
             "category": 1,
@@ -250,7 +250,7 @@
         "pk": 20,
         "model": "products.product",
         "fields": {
-            "product_code": "100119"
+            "product_code": "100119",
             "name": "Short Sleeve Ombre Check Shirt",
             "description": "A short sleeve shirt featuring a soft ombre check effect fabric. Cut to our Union fit in our quality 100% cotton and styled with our iconic two finger button down collar, spade chest pocket and pocket tab branding. At the back is an open box pleat and locker loop in-keeping with our traditional styling.",
             "category": 1,
@@ -263,7 +263,7 @@
         "pk": 21,
         "model": "products.product",
         "fields": {
-            "product_code": "101100"
+            "product_code": "101100",
             "name": "Red & Black Puppytooth Slim Fit Suit Trouser",
             "description": "Sharpen up your formalwear with Ben Sherman this season, adept in contemporary tailoring, refined pieces and casual suiting. Boasting our signature Camden fit, this suit trouser built from quality fabrics comes with the matching suit jacket with a single-breasted, two-button front for all your formal needs.",
             "category": 2,
@@ -276,7 +276,7 @@
         "pk": 22,
         "model": "products.product",
         "fields": {
-            "product_code": "101101"
+            "product_code": "101101",
             "name": "Trousers Navy Semi Plain Slim Trousers",
             "description": "A stylish pair of men's trousers - ideal for any wardrobe regardless of the occasion, these slim fit navy trousers are tapered with a flattering profile. With a flat fronted design, slanted pockets and a back hip pocket, this pair of men's dark blue trousers boasts a lightweight feel that makes a versatile, stylish addition to any wardrobe.",
             "category": 2,
@@ -289,7 +289,7 @@
         "pk": 23,
         "model": "products.product",
         "fields": {
-            "product_code": "101102"
+            "product_code": "101102",
             "name": "Deep Blue Rust Check Slim Trouser",
             "description": "Our Ben Sherman tailoring is crafted on the modern Camden Fit block; a sharp, slim cut narrow through the leg and tapered at the ankle. This on brand mod check 2-piece suit is cut from quality cloth. The exclusively designed for Ben Sherman cloths combine traditional philosophy and modern innovation to give a contemporary interpretation of British sartorial elegance. Inspired and considered suit details in the design of this suit give a subtle nod to brand heritage. Feel slick and confident - wear sharp with a button-down oxford shirt or for relaxed, easy menswear style casual with a knitted roll neck and trainers.",
             "category": 2,
@@ -302,7 +302,7 @@
         "pk": 24,
         "model": "products.product",
         "fields": {
-            "product_code": "101103"
+            "product_code": "101103",
             "name": "Dark Green Signature Slim Stretch Chino",
             "description": "This classic, slim-fitting chino from Ben Sherman is styled with two side pockets, a coin pocket and two jet pockets. With mod stripe detailing on the hem and Ben Sherman branding to the centre-back, these chinos are the ideal piece to pair with plain tees or jumpers.",
             "category": 2,
@@ -315,7 +315,7 @@
         "pk": 25,
         "model": "products.product",
         "fields": {
-            "product_code": "101104"
+            "product_code": "101104",
             "name": "Bordeaux Signature Slim Stretch Chino",
             "description": "This classic, slim-fitting chino from Ben Sherman is styled with two side pockets, a coin pocket and two jet pockets. With mod stripe detailing on the hem and Ben Sherman branding to the centre-back, these chinos are the ideal piece to pair with plain tees or jumpers.",
             "category": 2,
@@ -328,7 +328,7 @@
         "pk": 26,
         "model": "products.product",
         "fields": {
-            "product_code": "101105"
+            "product_code": "101105",
             "name": "Olive Signature Slim Stretch Chino",
             "description": "Ben Sherman is a cut above the rest when it comes to smart-casual dressing for men. This classic, slim-fitting chino is styled with two side pockets, a coin pocket and two jet pockets. With mod stripe detailing on the hem and Ben Sherman branding to the centre back, these chinos are the ideal piece to pair with plain tees or jumpers.",
             "category": 2,
@@ -341,7 +341,7 @@
         "pk": 27,
         "model": "products.product",
         "fields": {
-            "product_code": "101106"
+            "product_code": "101106",
             "name": "Grey Slim Fit Chino Trouser",
             "description": "A stylish men's pair of chinos in grey by Ted Baker, available at Suit Direct. With a versatile grey colour scheme, tapered legs and a flat-fronted design, completed with subtle, minimalist branding, these slim-fit grey chinos are a must-have for any day-to-day wardrobe.",
             "category": 2,
@@ -354,7 +354,7 @@
         "pk": 28,
         "model": "products.product",
         "fields": {
-            "product_code": "101107"
+            "product_code": "101107",
             "name": "Cool Grey Texture Trouser",
             "description": "Limehaus is a true trendsetter in menswear, this sophisticated cool grey texture suit is a stylish slim fit, perfect for every dress code. The suit trouser features a plain front and zip fly fastening with hook and bar. This suit boasts a contemporary twist on traditional style, style with the matching jacket, the perfect look for any occasion.",
             "category": 2,
@@ -367,7 +367,7 @@
         "pk": 29,
         "model": "products.product",
         "fields": {
-            "product_code": "101108"
+            "product_code": "101108",
             "name": "Navy Textured Wool Blend Regular Fit Travel Suit Trouser",
             "description": "The Jeff Banks London Travel suit collection is engineered to combine the highest performance in fabric and garment construction, available at Suit Direct. This flat-fronted, regular fitting trouser features fabric that protects against water and stains, while it is delicately woven with elastane – perfect to look smart, sharp and stay superbly comfortable all day long.",
             "category": 2,
@@ -380,7 +380,7 @@
         "pk": 30,
         "model": "products.product",
         "fields": {
-            "product_code": "101109"
+            "product_code": "101109",
             "name": "Navy Pindot Slim Fit Trousers",
             "description": "A stylish, slim fit pair of suit trousers from Scott by the Label, with a navy blue colour scheme and a pindot pattern. With a flat fronted design, belt loops and two hip pockets, this navy blue pindot pattern suit trouser is a versatile piece for any wardrobe.",
             "category": 2,
@@ -393,7 +393,7 @@
         "pk": 31,
         "model": "products.product",
         "fields": {
-            "product_code": "101110"
+            "product_code": "101110",
             "name": "Grey Pale Blue Check Slim Suit Trousers",
             "description": "Check you out. No, seriously, this Ted Baker trouser is the sure-fire way to look dapper this year, available at Suit Direct. These slim-fit suit trousers will keep you comfortable in their wool-blend while their check pattern does all the hard work for you in the style stakes. Add the matching suit jacket to the mix, and you're ready to take those occasions by storm. Now, how to tie a bow tie?",
             "category": 2,
@@ -406,7 +406,7 @@
         "pk": 32,
         "model": "products.product",
         "fields": {
-            "product_code": "101111"
+            "product_code": "101111",
             "name": "Grey Heather Check Suit Trousers",
             "description": "What could be more appealing than a Ted Baker suit trouser in 100% wool, we ask? This regular fitting design features a side vent for breathability and versatility – a modern take on a classic never looked so good. Check out the grey heather check and printed lining, just some of the amazing qualities of this stylish trouser you’ll want to take everywhere. Style yours with our matching suit jacket and get ready for any occasion.",
             "category": 2,
@@ -419,7 +419,7 @@
         "pk": 33,
         "model": "products.product",
         "fields": {
-            "product_code": "102100"
+            "product_code": "102100",
             "name": "Putty Linen Herringbone Tailored Fit Suit",
             "description": "A tailored suit fit for any occasion, this Hammond & Co suit jacket features a tailored fit, two-button fastening and notch lapel – all tied together with four-button cuffs and an effortless style.",
             "category": 3,
@@ -432,7 +432,7 @@
         "pk": 34,
         "model": "products.product",
         "fields": {
-            "product_code": "102101"
+            "product_code": "102101",
             "name": "Heritage Gingham Slim Fit Suit Jacket",
             "description": "Ben Sherman’s tailoring is adept in smart, refined pieces. With a focus on fit, this modern-silhouetted suit jacket has a skinny profile with narrow lapels and a single vent. A classic jacket perfect for transitioning into new seasons and from weddings to weekends. Wear yours with a button-down Oxford shirt and black brogues for a smart contender.",
             "category": 3,
@@ -445,7 +445,7 @@
         "pk": 35,
         "model": "products.product",
         "fields": {
-            "product_code": "102102"
+            "product_code": "102102",
             "name": "Light Grey Broken Check Suit Jacket",
             "description": "Alexandre of England hold the royal warrant for suits and tailoring, and continues to provide excellent quality, style and a natural eye for meticulous detail in luxurious men’s clothing. This light-grey, broken check suit jacket is perfect for any special occasion, with its single-breasted, two-button front with side vents and notch lapels as well as two straight-side pockets – all inspired by the traditions of British tailoring.",
             "category": 3,
@@ -458,7 +458,7 @@
         "pk": 36,
         "model": "products.product",
         "fields": {
-            "product_code": "102103"
+            "product_code": "102103",
             "name": "Charcoal Micro Check Regular Fit Jacket",
             "description": "Take on wool for your wardrobe with Ted Baker, and this pure wool, grey textured suit jacket. This blazer is an instant winner for any wardrobe, seamlessly slipping into any office or formal dress code, with a charcoal micro checked colour scheme that makes a five star addition to your casual outfit, too. It’s a real multi-purpose jacket for the man with style on his mind.",
             "category": 3,
@@ -471,7 +471,7 @@
         "pk": 37,
         "model": "products.product",
         "fields": {
-            "product_code": "102104"
+            "product_code": "102104",
             "name": "Blue Fine Stripe Linen Blazer",
             "description": "Update your seasonal wardrobe with a finely striped blazer for men from Jeff Banks. Featuring a stylish contrast stitch and lining details, this two-button piece is complete with notch lapels and four-button cuffs. This is the ideal piece for the office or a sharp wedding suit.",
             "category": 3,
@@ -484,7 +484,7 @@
         "pk": 38,
         "model": "products.product",
         "fields": {
-            "product_code": "102105"
+            "product_code": "102105",
             "name": "Brown Ascari Suit Jacket",
             "description": "The epitome of the quintessential English gentleman, this House Of Cavani suit jacket is no exception. Timeless, simple and classic in its heritage-inspired design, this slim-fitting Ascari jacket in a traditional brown is great for every occasion - a piece you'll wear again and again.",
             "category": 3,
@@ -497,7 +497,7 @@
         "pk": 39,
         "model": "products.product",
         "fields": {
-            "product_code": "102106"
+            "product_code": "102106",
             "name": "Stone Light Flannel Suit Jacket",
             "description": "Take your formal dressing to new heights with this smart suit jacket by Pierre Cardin. This stone, light flannel jacket features a structured, tailored fit. Pair yours with your favourite pair of jeans and some trainers for an off-duty look.",
             "category": 3,
@@ -510,7 +510,7 @@
         "pk": 40,
         "model": "products.product",
         "fields": {
-            "product_code": "102107"
+            "product_code": "102107",
             "name": "Airforce Linen Slub Slim Jacket",
             "description": "Inject life into your wardrobe with a brand-new suit jacket from Ted Baker (it’s that easy). In a slim fit and made from a linen-wool blend, this piece is ready to do all the talking for you. It features a two-button fastening, notch lapel and built-in pocket square for an added touch of elegance.",
             "category": 3,
@@ -523,7 +523,7 @@
         "pk": 41,
         "model": "products.product",
         "fields": {
-            "product_code": "103100"
+            "product_code": "103100",
             "name": "Blue Cream Gingham Waistcoat",
             "description": "A classic blue and white checked waistcoat; ideal for adding colour, texture and versatile sophistication to your wardrobe. With a classic fit, five-button fastening and sharp lapels, this adjustable blue checked waistcoat is a great addition to your outfit - sharp, versatile and unique for any occasion.",
             "category": 4,
@@ -536,7 +536,7 @@
         "pk": 42,
         "model": "products.product",
         "fields": {
-            "product_code": "103101"
+            "product_code": "103101",
             "name": "Ted Tan Check Tailored Fit Suit Waistcoat",
             "description": "Marc Darcy is the epitome of the quintessential English gentleman, with a knack for creating the finest men’s garments with a modern twist. This waistcoat features a heritage tan check design with a classic tailored fit.",
             "category": 4,
@@ -549,7 +549,7 @@
         "pk": 43,
         "model": "products.product",
         "fields": {
-            "product_code": "103102"
+            "product_code": "103102",
             "name": "Light Blue & Tan Check Waistcoat",
             "description": "The epitome of the quintessential English gentleman. This racing green suit is no exception, timeless, simple and classic in its design this Light Blue Tan Check waistcoat is great for every occasion, a piece you''ll wear again and again. Style with the matching jacket and trouser to complete your look.",
             "category": 4,
@@ -562,7 +562,7 @@
         "pk": 44,
         "model": "products.product",
         "fields": {
-            "product_code": "103103"
+            "product_code": "103103",
             "name": "Eddie Teal Waistcoat",
             "description": "A guaranteed winner on its own or paired with the matching suit jacket, this traditional waistcoat from Marc Darcy was made for smart occasions. Character is added with a subtle teal and burnt orange check and a four-button fastening plus a suave scooped front.",
             "category": 4,
@@ -575,7 +575,7 @@
         "pk": 45,
         "model": "products.product",
         "fields": {
-            "product_code": "103104"
+            "product_code": "103104",
             "name": "Blue Bonita Waistcoat",
             "description": "The epitome of the quintessential English gentleman, this House Of Cavani double-breasted waistcoat is no exception. Timeless, simple and classic in its heritage-inspired design, the blue Bonita waistcoat features a classic fit and is great for every occasion.",
             "category": 4,
@@ -588,7 +588,7 @@
         "pk": 46,
         "model": "products.product",
         "fields": {
-            "product_code": "103105"
+            "product_code": "103105",
             "name": "Wilson Navy Birdseye Waistcoat",
             "description": "Add heaps of sophistication to your formalwear with this latest waistcoat from Marc Darcy. Paired perfectly with its matching suit jacket and trousers, this piece features a slimming fit and contrasting pocket trims for added detail.",
             "category": 4,
@@ -601,7 +601,7 @@
         "pk": 47,
         "model": "products.product",
         "fields": {
-            "product_code": "103106"
+            "product_code": "103106",
             "name": "Light Blue Plain Waistcoat",
             "description": "A colourful, bright and eyecatching single-breasted blue waistcoat. The ideal suit style for the modern day rascal. This stylish slim fit waistcoat can be accessorised with a unique suit jacket and trousers in a similar bright, striking colour scheme.",
             "category": 4,
@@ -614,7 +614,7 @@
         "pk": 48,
         "model": "products.product",
         "fields": {
-            "product_code": "103107"
+            "product_code": "103107",
             "name": "Grey Melange Woollen Regular Waistcoat",
             "description": "A waistcoat in a league of its own? It’s Ted Baker, of course. In a regular fit and made from 100% wool for comfort that can’t be matched. This light grey melange waistcoat is a versatile winner and will see you through the day with ease. Pair yours with the matching waistcoat and get ready for any occasion… You can thank us later.",
             "category": 4,
@@ -627,7 +627,7 @@
         "pk": 49,
         "model": "products.product",
         "fields": {
-            "product_code": "104100"
+            "product_code": "104100",
             "name": "Straight Leg Chino Short",
             "description": "Signature dark navy blue cotton chino shorts by Ben Sherman. These men's straight-legged navy chino shorts boast super soft cotton fabric and a modern, mod style slim fit for any wardrobe - completed with a coin pocket and tape detailing, as well as the iconic Ben Sherman branding.",
             "category": 5,
@@ -640,7 +640,7 @@
         "pk": 50,
         "model": "products.product",
         "fields": {
-            "product_code": "104101"
+            "product_code": "104101",
             "name": "Chino Short",
             "description": "A classic pair of men's stretch cotton chino shorts from Ben Sherman menswear; with two side pockets, a regular fit and a marine blue colour scheme. These blue chino shorts are ideal for summer wardrobes, with mod stripe detailing and the iconic Ben Sherman branding.",
             "category": 5,
@@ -653,7 +653,7 @@
         "pk": 51,
         "model": "products.product",
         "fields": {
-            "product_code": "104102"
+            "product_code": "104102",
             "name": "Chino Short",
             "description": "A classic pair of men's stretch cotton chino shorts from Ben Sherman menswear; with two side pockets, a regular fit and a marine blue colour scheme. These blue chino shorts are ideal for summer wardrobes, with mod stripe detailing and the iconic Ben Sherman branding.",
             "category": 5,
@@ -666,7 +666,7 @@
         "pk": 52,
         "model": "products.product",
         "fields": {
-            "product_code": "104103"
+            "product_code": "104103",
             "name": "Printed Chino Short",
             "description": "Ben Sherman chino shorts for men - with a mod style angular print and premium cotton fabric. Boasting two side pockets, two welt pockets and the iconic Ben Sheran branding, these navy and gold diamond pattern men's shorts are ideal for any wardrobe. A classic from the original mod brand, est 1963.",
             "category": 5,
@@ -679,7 +679,7 @@
         "pk": 53,
         "model": "products.product",
         "fields": {
-            "product_code": "104104"
+            "product_code": "104104",
             "name": "Printed Chino Short",
             "description": "Ben Sherman chino shorts for men - with a mod style angular print and premium cotton fabric. Boasting two side pockets, two welt pockets and the iconic Ben Sheran branding, these navy and gold diamond pattern men's shorts are ideal for any wardrobe. A classic from the original mod brand, est 1963.",
             "category": 5,
@@ -692,7 +692,7 @@
         "pk": 54,
         "model": "products.product",
         "fields": {
-            "product_code": "104105"
+            "product_code": "104105",
             "name": "Seersucker Check Short",
             "description": "Ben Sherman presents the best in smart-casual dressing with a classic pair of slim-fitting shorts for men. This regular-fitting short is styled with a cotton seersucker check fabric, and features two slanted pockets, two welt pockets and a Ben Sherman woven badge to the centre back. Pair yours with a classic polo shirt and white trainers for an off-duty look.",
             "category": 5,
@@ -705,7 +705,7 @@
         "pk": 55,
         "model": "products.product",
         "fields": {
-            "product_code": "104106"
+            "product_code": "104106",
             "name": "Chino Short",
             "description": "Ben Sherman is a cut above the rest when it comes to smart-casual dressing for men. This classic, regular-fitting chino short styled with two side pockets, a coin pocket and two jet pockets. With mod stripe detailing on the hem and Ben Sherman branding to the centre back, these chinos are the ideal piece to pair with plain tees or jumpers.",
             "category": 5,
@@ -718,7 +718,7 @@
         "pk": 56,
         "model": "products.product",
         "fields": {
-            "product_code": "105100"
+            "product_code": "105100",
             "name": "Blue Skinny Fit Suit",
             "description": "A stylish deep blue suit for any wardrobe, this men's skinny fit suit is perfectly matched up to weddings, formal occasions and more, with a trendy fit that's ideal for the more fashionable gent. With its sharp, skinny fit, notch lapels, slanted flap pockets and buttoned cuffs, this men's super slim fit suit is a versatile addition to any formal dress code.",
             "category": 6,
@@ -731,7 +731,7 @@
         "pk": 57,
         "model": "products.product",
         "fields": {
-            "product_code": "105101"
+            "product_code": "105101",
             "name": "Bright Blue Texture Tailored Fit Suit",
             "description": "A versatile men's wool blend suit from Racing Green, with a bright blue texture that's ideal for everything from the office to formal dress codes. Boasting a durable fabric, a two button fastening and notch lapels, this suit jacket features a versatile texture that matches any dress code, and is easily accessorised.",
             "category": 6,
@@ -744,7 +744,7 @@
         "pk": 58,
         "model": "products.product",
         "fields": {
-            "product_code": "105102"
+            "product_code": "105102",
             "name": "Jenson Blue Check Tailored Fit Suit",
             "description": "Marc Darcy present the ultimate tweed suit for the quintessentially British gentlemen. This suit jacket is made from a sky blue and brown checked tweed fabric, boasting a two button fastening, a slim fit and four button cuffs. A true heritage classic, this bright blue tweed blazer is versatile and stylish, perfect for a peaky blinders profile, a day at the races or a unique country gentleman style.",
             "category": 6,
@@ -757,7 +757,7 @@
         "pk": 59,
         "model": "products.product",
         "fields": {
-            "product_code": "105103"
+            "product_code": "105103",
             "name": "Jerry Grey Check Suit",
             "description": "In need of a suit that stands out? Try this on for size. From Marc Darcy, this light-grey suit jacket is enhanced with a subtle check and pop of royal blue to the lining. Double back vents add delicate accents and freedom of movement, while the slim fit creates the perfect silhouette. Pair yours with the matching suit trousers and waistcoat for an effortless look.",
             "category": 6,
@@ -770,7 +770,7 @@
         "pk": 60,
         "model": "products.product",
         "fields": {
-            "product_code": "105104"
+            "product_code": "105104",
             "name": "Wilson Navy Birdseye Suit",
             "description": "It’s time to stand out from the crowd, in this latest suit jacket from Marc Darcy. Complete with a navy and wine-red finish, it features a slim fit and single-breasted front complete with four-button cuffs and a double-button fastening. Pair yours with the matching suit trousers and waistcoat.",
             "category": 6,
@@ -783,7 +783,7 @@
         "pk": 61,
         "model": "products.product",
         "fields": {
-            "product_code": "105105"
+            "product_code": "105105",
             "name": "Grey Pale Blue Check Slim Suit",
             "description": "Here we have a striking slim-fit suit jacket in a check pattern made from Italian wool by Ted Baker. This sharp, unique suit will have heads turning all day long. In this slim fit and extravagant check, you'll feel like you've won in the style stakes.",
             "category": 6,
@@ -796,7 +796,7 @@
         "pk": 62,
         "model": "products.product",
         "fields": {
-            "product_code": "105106"
+            "product_code": "105106",
             "name": "Ink Blue Sharkskin Premier Fit Suit",
             "description": "A stylish men's sharkskin suit from Scott by the Label - inspired by the constant trendsetter of Sharkskin suiting, with a shiny, silky texture that's truly luxurious. With a wool blend fabric, notch lapels and a two button fastening, this men's suit is an instant classic for a professional, stylish wardrobe.",
             "category": 6,
@@ -809,7 +809,7 @@
         "pk": 63,
         "model": "products.product",
         "fields": {
-            "product_code": "105107"
+            "product_code": "105107",
             "name": "Airforce Texture Suit",
             "description": "Turn things up a notch with this Ted Baker suit jacket, in a fine wool-blend and grey airforce texture. It keeps things simple with a two-button fastening, inbuilt pocket square for ease, and a branded lapel pin. Go one sartorial step further and pair with the matching suit trousers for an effortless look – easy peasy.",
             "category": 6,
@@ -822,7 +822,7 @@
         "pk": 64,
         "model": "products.product",
         "fields": {
-            "product_code": "105108"
+            "product_code": "105108",
             "name": "Light Grey Tonal Checked Suit",
             "description": "Does it get much better than this? We don’t think so. This Ted Baker suit jacket is here for all your occasionwear needs, with its wool-blend, slimming fit and two-button fastening for versatility and easiness. Styled in a tonal, light grey check, it’s a truly modern take on a classic design – just pair yours with the matching suit trousers and waistcoat and you’re good to go.",
             "category": 6,
@@ -835,7 +835,7 @@
         "pk": 65,
         "model": "products.product",
         "fields": {
-            "product_code": "105109"
+            "product_code": "105109",
             "name": "Deep Blue Rust Check Suit",
             "description": "Our Ben Sherman tailoring is crafted on the modern Camden Fit block; a sharp, slim cut with notch lapels and soft sloped shoulders.The exclusively designed for Ben Sherman cloths combine traditional philosophy and modern innovation to give a contemporary interpretation of British sartorial elegance. Mill woven label stitched inside jacket to convey the British story. Inspired and considered details in the design of this suit give a subtle nod to brand heritage. With a two button front, notch lapel, and flap pockets feel slick and confident in this suit - wear sharp with a button-down oxford shirt or for relaxed, easy menswear style casual with a knitted roll neck and trainers.",
             "category": 6,
@@ -848,7 +848,7 @@
         "pk": 66,
         "model": "products.product",
         "fields": {
-            "product_code": "105110"
+            "product_code": "105110",
             "name": "Grey Pick N Pick Tailored Two Piece Suit",
             "description": "Update your formalwear with a classic suit – like this – from Racing Green. Contemporary, pared-back and simply effortless, this wool-blend two-piece is transitional and will see you through all of life’s seasons and occasions, including weddings to more casual weekends. Wear yours smart with a button-down Oxford shirt and brogues, or go casual with a plain tee and trainers combo – anything goes.",
             "category": 6,
@@ -861,7 +861,7 @@
         "pk": 67,
         "model": "products.product",
         "fields": {
-            "product_code": "105111"
+            "product_code": "105111",
             "name": "Blue Tan Check Tailored Fit Two Piece Suit",
             "description": "Update your formalwear with a classic suit – like this – from Racing Green. Contemporary, pared-back and simply effortless, this wool-blend two-piece is transitional and will see you through all of life’s seasons and occasions, including weddings to more casual weekends. Wear yours smart with a button-down Oxford shirt and brogues, or go casual with a plain tee and trainers combo – anything goes.",
             "category": 6,
@@ -874,7 +874,7 @@
         "pk": 68,
         "model": "products.product",
         "fields": {
-            "product_code": "106100"
+            "product_code": "106100",
             "name": "Grey Structure Overcoat",
             "description": "Sharp, cool and progressive - Ben Sherman tailoring continues its trend of smart, refined menswear with this grey wool blend overcoat. Perfect for layering, this grey overcoat features a three button fastening, notch lapels and the Ben Sherman amplifier lining - with side pockets and three button cuffs.",
             "category": 7,
@@ -887,7 +887,7 @@
         "pk": 69,
         "model": "products.product",
         "fields": {
-            "product_code": "106101"
+            "product_code": "106101",
             "name": "Prince of Wales Check Overcoat",
             "description": "A prince of wales check and traditional suit styles combine to create this overcoat by Racing Green menswear, ideal for your Autumn-Winter wardrobe. A smart, tailored look overcoat for men - creating a unique statement for the changing season, ideal for layering up.",
             "category": 7,
@@ -900,7 +900,7 @@
         "pk": 70,
         "model": "products.product",
         "fields": {
-            "product_code": "106102"
+            "product_code": "106102",
             "name": "Double Breasted Donegal Pea Coat",
             "description": "The Donegal pea coat by Jeff Banks, an ideal investment piece for men. Constructed in a soft wool-blend, with effortless button fastenings, this superbly smart coat features a double-breasted fastening with simple button fastenings, two handy external pockets and a notch lapel.",
             "category": 7,
@@ -913,7 +913,7 @@
         "pk": 71,
         "model": "products.product",
         "fields": {
-            "product_code": "106103"
+            "product_code": "106103",
             "name": "Single Breasted Overcoat",
             "description": "Contemporary, single-breasted and durable, this wool-blend overcoat from Ben Sherman ticks all the seasonal boxes. Features include a signature house check lining and three-button fastening.",
             "category": 7,
@@ -926,7 +926,7 @@
         "pk": 72,
         "model": "products.product",
         "fields": {
-            "product_code": "106104"
+            "product_code": "106104",
             "name": "Charcoal Funnel Neck Overcoat",
             "description": "Invest in the pieces built to last, like this charcoal overcoat from Jeff Banks. With a funnel neck and constructed from a soft wool-blend, this coat features effortlessly concealed button fastenings, a tonal lining and both external and internal pockets for maximum practicality. Add a touch of heritage to your wardrobe today.",
             "category": 7,
@@ -939,7 +939,7 @@
         "pk": 73,
         "model": "products.product",
         "fields": {
-            "product_code": "106105"
+            "product_code": "106105",
             "name": "Blue Black Textured Car Coat",
             "description": "Start your day the right way with Ted Baker’s blue/black textured car coat. A true classic in any man’s wardrobe, this versatile piece features a wool-blend cloth on a classic slim-fit, finished with a subtle five-button fastening. With angled pockets for plenty of space and security, plus a detailed printed lining, what more could you possibly want?",
             "category": 7,
@@ -952,7 +952,7 @@
         "pk": 74,
         "model": "products.product",
         "fields": {
-            "product_code": "200100"
+            "product_code": "200100",
             "name": "Blue Diamante Cufflinks",
             "description": "A pair of men's silver cufflinks by Scott & Taylr, with a blue diamante stone inset and a sharp cube shape. The ideal addition to any wardrobe, these men's blue cufflinks are presented in a gift box that makes an ideal gift for men this Christmas.",
             "category": 8,
@@ -965,7 +965,7 @@
         "pk": 75,
         "model": "products.product",
         "fields": {
-            "product_code": "200101"
+            "product_code": "200101",
             "name": "Silver Metal Victorian Pheasant Cufflinks",
             "description": "A suave suit isn’t complete without a finishing flourish of silver cufflinks from Racing Green. Crafted in an elegant circular design, these pheasant cufflinks can be secured to single- or double-cuff shirts to accentuate any look. Pair your very own with the matching pheasant hip flask, the perfect piece for gifting.",
             "category": 8,
@@ -978,7 +978,7 @@
         "pk": 76,
         "model": "products.product",
         "fields": {
-            "product_code": "200102"
+            "product_code": "200102",
             "name": "Silver Metal Top Hat Novelty Cufflinks",
             "description": "A suave suit isn’t complete without a finishing flourish of silver cufflinks from Racing Green. Highly detailed, these novelty top hat cufflinks are finished in luxuriously polished rhodium - the perfect piece for gifting, and an eccentric change from the cufflink norm.",
             "category": 8,
@@ -991,7 +991,7 @@
         "pk": 77,
         "model": "products.product",
         "fields": {
-            "product_code": "200103"
+            "product_code": "200103",
             "name": "Silver Knot Cufflinks",
             "description": "A smart and contemporary pair of bar cufflinks. A sleek and on trend pair of bar cufflinks, A wonderful gift for any man whether it be for his birthday, Father’s Day, Christmas or as a special gift to say thank you or congratulations. They also make a great gift for best men, ushers and groomsmen.",
             "category": 8,
@@ -1004,7 +1004,7 @@
         "pk": 78,
         "model": "products.product",
         "fields": {
-            "product_code": "200104"
+            "product_code": "200104",
             "name": "Silver Vintage Novelty Racing Car Cufflinks",
             "description": "A sleek, on-trend novelty pair of cufflinks in a race car design by Racing Green. A great gift for any man in your life, whether it’s for his birthday, Father’s Day, Christmas or as a special ‘thank you’ or ‘congratulations’ present.",
             "category": 8,
@@ -1017,7 +1017,7 @@
         "pk": 79,
         "model": "products.product",
         "fields": {
-            "product_code": "201100"
+            "product_code": "201100",
             "name": "Stvdio Navy Irregular Textured Tie",
             "description": "Stvdio by Jeff Banks is a fashion forward range of designs, this tie features a navy irregular textured design and a spot jacquard lining. A great versatile tie that will look great with a variety of shirts and suits. This tie is made from 100 percent silk which is stain resistant for easy care.",
             "category": 9,
@@ -1030,7 +1030,7 @@
         "pk": 80,
         "model": "products.product",
         "fields": {
-            "product_code": "201101"
+            "product_code": "201101",
             "name": "Stvdio Pink Irregular Textured Tie",
             "description": "A pink, textured tie for men by Jeff Banks Brit collection, with a slim blade and a textured, light pink colour scheme in a textured silk fabric. This classic men's tie is ideal for any occasion, with a statement look that adds a flash of colour and texture to any wardrobe - only from Jeff Banks menswear.",
             "category": 9,
@@ -1043,7 +1043,7 @@
         "pk": 81,
         "model": "products.product",
         "fields": {
-            "product_code": "201102"
+            "product_code": "201102",
             "name": "London Navy Paisley Tie",
             "description": "London by Jeff Banks offers a contemporary range of men’s ties in an array of prints and textures. This style features a navy paisley design, complete with a crown jacquard lining in the brand's unique bottle shape. Versatility and class go hand in hand with this piece, which boasts 100% silk and a stain-resistant finish for easy care.",
             "category": 9,
@@ -1056,7 +1056,7 @@
         "pk": 82,
         "model": "products.product",
         "fields": {
-            "product_code": "201103"
+            "product_code": "201103",
             "name": "Dion Blue Bow Tie",
             "description": "A perfect match for our bestselling Marc Darcy Dion Suit, this butterfly bow tie features the same blue tonal tweed fabric in a pre-tied dickie bow. With a pre-tied design and a hook and eye fastening, this adjustable blue tweed bow tie is a must have for weddings and formal occasions, combining heritage British fabrics with a modern, practical design.",
             "category": 9,
@@ -1069,7 +1069,7 @@
         "pk": 83,
         "model": "products.product",
         "fields": {
-            "product_code": "201104"
+            "product_code": "201104",
             "name": "Enzo Blue Grey Checked Bow Tie",
             "description": "Made to pair with the matching suit, this blue and grey check tie is a true classic for all wardrobes and occasions. The perfect accompaniment for weddings, races or any other smart event you can think of.",
             "category": 9,
@@ -1082,7 +1082,7 @@
         "pk": 84,
         "model": "products.product",
         "fields": {
-            "product_code": "201105"
+            "product_code": "201105",
             "name": "Lilac Paisley Tie",
             "description": "Dare to be different with this lilac paisley tie from the Occasions range. Perfect for the fashion conscious gent, this tie is an eye catching addition to every formal look.",
             "category": 9,
@@ -1095,7 +1095,7 @@
         "pk": 85,
         "model": "products.product",
         "fields": {
-            "product_code": "201106"
+            "product_code": "201106",
             "name": "Blue Paisley Tie",
             "description": "The epitome of the quintessential English gentleman, this Racing Green tie is no exception. In a navy-blue paisley design, this will add a hint of decadence to any outfit. Made from 100% polyester for easy care, it features the brand’s signature print lining and a 6.5cm blade width.",
             "category": 9,
@@ -1108,7 +1108,7 @@
         "pk": 86,
         "model": "products.product",
         "fields": {
-            "product_code": "201107"
+            "product_code": "201107",
             "name": "Black Diamond Texture Tie",
             "description": "This black diamond textured tie from the Racing Green range is a versatile and timeless classic. Pair with any formal attire to subtly enhance any look. The perfect addition to a capsule wardrobe.",
             "category": 9,
@@ -1121,7 +1121,7 @@
         "pk": 87,
         "model": "products.product",
         "fields": {
-            "product_code": "201108"
+            "product_code": "201108",
             "name": "Blue Tonal Leaf Tie",
             "description": "The fashion forward Limehaus brand offers a modern, versatile tie at an affordable price, the blue tonal leaf design is perfect for pairing with a shirt and sharp suit. The tie is made from 100 per cent polyester so has the added bonus of being machine washable.",
             "category": 9,
@@ -1134,7 +1134,7 @@
         "pk": 88,
         "model": "products.product",
         "fields": {
-            "product_code": "201109"
+            "product_code": "201109",
             "name": "Silver Glitz Paisley Tie",
             "description": "Make a statement this season with this modern, versatile tie from Limehaus. Designed in a stylish silver glitz paisley fabric making it the ideal finishing touch to any outfit. The perfect outfit accompaniment for weddings, races or any other smart event you can think of.",
             "category": 9,
@@ -1147,7 +1147,7 @@
         "pk": 89,
         "model": "products.product",
         "fields": {
-            "product_code": "202100"
+            "product_code": "202100",
             "name": "Premium Navy Braces",
             "description": "Elasticated braces by Racing Green, with a crossed back and strong elastic, with silver coloured clips. Ideal for adding to any formal outfit or tuxedo.",
             "category": 10,
@@ -1160,7 +1160,7 @@
         "pk": 90,
         "model": "products.product",
         "fields": {
-            "product_code": "202101"
+            "product_code": "202101",
             "name": "Premium Black Braces",
             "description": "Elasticated braces by Racing Green, with a crossed back and strong elastic, with silver coloured clips. Ideal for adding to any formal outfit or tuxedo.",
             "category": 10,
@@ -1173,7 +1173,7 @@
         "pk": 91,
         "model": "products.product",
         "fields": {
-            "product_code": "202102"
+            "product_code": "202102",
             "name": "Burgundy Braces",
             "description": "Neat, sleek and simple men’s braces for making sure your style is secure, these classic burgundy style suspenders have added stretch for plenty of comfort. Fully adjustable for a comfort fit.",
             "category": 10,
@@ -1186,7 +1186,7 @@
         "pk": 92,
         "model": "products.product",
         "fields": {
-            "product_code": "202103"
+            "product_code": "202103",
             "name": "Navy Speckle Braces",
             "description": "Neat, sleek and simple men’s braces for making sure your style is secure, these classic burgundy style suspenders have added stretch for plenty of comfort. Fully adjustable for a comfort fit.",
             "category": 10,
@@ -1199,7 +1199,7 @@
         "pk": 93,
         "model": "products.product",
         "fields": {
-            "product_code": "202104"
+            "product_code": "202104",
             "name": "Premium 35mm Navy Diamond Braces",
             "description": "Elasticated braces by Racing Green, with a crossed back and strong elastic, with silver coloured clips. Ideal for adding to any formal outfit or tuxedo.",
             "category": 10,
@@ -1212,7 +1212,7 @@
         "pk": 94,
         "model": "products.product",
         "fields": {
-            "product_code": "203100"
+            "product_code": "203100",
             "name": "Black Top Stitch Belt",
             "description": "A classic men's black belt by Scott & Taylor. This black feather edge belt features top stitch detailing and a silver buckle - an ideal belt to match with a grey suit and black shoes.",
             "category": 11,
@@ -1225,7 +1225,7 @@
         "pk": 95,
         "model": "products.product",
         "fields": {
-            "product_code": "203101"
+            "product_code": "203101",
             "name": "Tan Top Stitch Belt",
             "description": "A classic men's tan belt by Scott & Taylor. This tan feather edge belt features top stitch detailing and a silver buckle - an ideal belt to match with a blue suit and tan brogues.",
             "category": 11,
@@ -1238,7 +1238,7 @@
         "pk": 96,
         "model": "products.product",
         "fields": {
-            "product_code": "203102"
+            "product_code": "203102",
             "name": "Black PU formal Belt with classic buckle",
             "description": "This Limehaus Black slim belt is a great addition to any formal wardrobe. Wear with the Limehaus black brogue for a stylish formal look",
             "category": 11,
@@ -1251,7 +1251,7 @@
         "pk": 97,
         "model": "products.product",
         "fields": {
-            "product_code": "300100"
+            "product_code": "300100",
             "name": "Cotton Shirting Fabric",
             "category": 12,
             "price": 4.99,
@@ -1263,7 +1263,7 @@
         "pk": 98,
         "model": "products.product",
         "fields": {
-            "product_code": "300101"
+            "product_code": "300101",
             "name": "Cotton Shirting Fabric Grey & Turquoise",
             "category": 12,
             "price": 5.99,
@@ -1275,7 +1275,7 @@
         "pk": 99,
         "model": "products.product",
         "fields": {
-            "product_code": "300102"
+            "product_code": "300102",
             "name": "Cotton Shirting Fabric",
             "category": 12,
             "price": 6.99,
@@ -1287,7 +1287,7 @@
         "pk": 100,
         "model": "products.product",
         "fields": {
-            "product_code": "300103"
+            "product_code": "300103",
             "name": "Cotton Shirting Fabric Pink",
             "category": 12,
             "price": 5.99,
@@ -1299,7 +1299,7 @@
         "pk": 101,
         "model": "products.product",
         "fields": {
-            "product_code": "300104"
+            "product_code": "300104",
             "name": "Lady McElroy Cotton Shirting Fabric Blue",
             "category": 12,
             "price": 8.99,
@@ -1311,7 +1311,7 @@
         "pk": 102,
         "model": "products.product",
         "fields": {
-            "product_code": "300105"
+            "product_code": "300105",
             "name": "Rose & Hubble Cotton Poplin Fabric",
             "category": 12,
             "price": 8.99,
@@ -1323,7 +1323,7 @@
         "pk": 103,
         "model": "products.product",
         "fields": {
-            "product_code": "300106"
+            "product_code": "300106",
             "name": "Rose & Hubble Cotton Poplin Fabric",
             "category": 12,
             "price": 8.99,
@@ -1335,7 +1335,7 @@
         "pk": 104,
         "model": "products.product",
         "fields": {
-            "product_code": "300107"
+            "product_code": "300107",
             "name": "Rose & Hubble Cotton Poplin Fabric",
             "category": 12,
             "price": 8.99,
@@ -1347,7 +1347,7 @@
         "pk": 105,
         "model": "products.product",
         "fields": {
-            "product_code": "300108"
+            "product_code": "300108",
             "name": "Rose & Hubble Cotton Poplin Fabric",
             "category": 12,
             "price": 8.99,
@@ -1359,7 +1359,7 @@
         "pk": 106,
         "model": "products.product",
         "fields": {
-            "product_code": "300109"
+            "product_code": "300109",
             "name": "Rose & Hubble Cotton Poplin Fabric",
             "category": 12,
             "price": 8.99,
@@ -1371,7 +1371,7 @@
         "pk": 107,
         "model": "products.product",
         "fields": {
-            "product_code": "301100"
+            "product_code": "301100",
             "name": "Wool Suiting Fabric Navy White Blue",
             "category": 13,
             "price": 18.99,
@@ -1383,7 +1383,7 @@
         "pk": 108,
         "model": "products.product",
         "fields": {
-            "product_code": "301101"
+            "product_code": "301101",
             "name": "Wool Tweed Suiting Fabric Black & White",
             "category": 13,
             "price": 18.99,
@@ -1395,7 +1395,7 @@
         "pk": 109,
         "model": "products.product",
         "fields": {
-            "product_code": "301102"
+            "product_code": "301102",
             "name": "Jacquard Cotton Suiting Fabric Navy & White",
             "category": 13,
             "price": 12.99,
@@ -1407,7 +1407,7 @@
         "pk": 110,
         "model": "products.product",
         "fields": {
-            "product_code": "301103"
+            "product_code": "301103",
             "name": "Brushed Stretch Woven Cotton Fabric",
             "category": 13,
             "price": 12.99,
@@ -1419,7 +1419,7 @@
         "pk": 111,
         "model": "products.product",
         "fields": {
-            "product_code": "301104"
+            "product_code": "301104",
             "name": "100% Wool Suiting Fabric Navy Blue",
             "category": 13,
             "price": 24.99,
@@ -1431,7 +1431,7 @@
         "pk": 112,
         "model": "products.product",
         "fields": {
-            "product_code": "301105"
+            "product_code": "301105",
             "name": "100% Wool Twill Suiting Fabric",
             "category": 13,
             "price": 30.99,
@@ -1443,7 +1443,7 @@
         "pk": 113,
         "model": "products.product",
         "fields": {
-            "product_code": "301106"
+            "product_code": "301106",
             "name": "100% Wool Suiting Fabric Caramel",
             "category": 13,
             "price": 21.99,
@@ -1455,7 +1455,7 @@
         "pk": 114,
         "model": "products.product",
         "fields": {
-            "product_code": "301107"
+            "product_code": "301107",
             "name": "100% Wool Suiting Fabric Grey",
             "category": 13,
             "price": 21.99,
@@ -1467,7 +1467,7 @@
         "pk": 115,
         "model": "products.product",
         "fields": {
-            "product_code": "302100"
+            "product_code": "302100",
             "name": "Robert Kaufman Santa Cruz Cotton Twill Fabric",
             "category": 14,
             "price": 22.99,
@@ -1479,7 +1479,7 @@
         "pk": 116,
         "model": "products.product",
         "fields": {
-            "product_code": "302101"
+            "product_code": "302101",
             "name": "Robert Kaufman Santa Cruz Cotton Twill Fabric",
             "category": 14,
             "price": 22.99,
@@ -1491,7 +1491,7 @@
         "pk": 117,
         "model": "products.product",
         "fields": {
-            "product_code": "302102"
+            "product_code": "302102",
             "name": "Robert Kaufman Santa Cruz Cotton Twill Fabric",
             "category": 14,
             "price": 22.99,
@@ -1503,7 +1503,7 @@
         "pk": 118,
         "model": "products.product",
         "fields": {
-            "product_code": "302103"
+            "product_code": "302103",
             "name": "Robert Kaufman Ventana Cotton Twill Fabric",
             "category": 14,
             "price": 15.99,
@@ -1515,7 +1515,7 @@
         "pk": 119,
         "model": "products.product",
         "fields": {
-            "product_code": "302104"
+            "product_code": "302104",
             "name": "Robert Kaufman Ventana Cotton Twill Fabric",
             "category": 14,
             "price": 15.99,
@@ -1527,7 +1527,7 @@
         "pk": 120,
         "model": "products.product",
         "fields": {
-            "product_code": "302105"
+            "product_code": "302105",
             "name": "Robert Kaufman Ventana Cotton Twill Fabric",
             "category": 14,
             "price": 15.99,
@@ -1539,7 +1539,7 @@
         "pk": 121,
         "model": "products.product",
         "fields": {
-            "product_code": "303100"
+            "product_code": "303100",
             "name": "Cashmere Wool Coating Fabric Black",
             "category": 15,
             "price": 27.99,
@@ -1551,7 +1551,7 @@
         "pk": 122,
         "model": "products.product",
         "fields": {
-            "product_code": "303101"
+            "product_code": "303101",
             "name": "Lady McElroy Wool Cashmere Coating Fabric Wine",
             "category": 15,
             "price": 25.99,
@@ -1563,7 +1563,7 @@
         "pk": 123,
         "model": "products.product",
         "fields": {
-            "product_code": "303102"
+            "product_code": "303102",
             "name": "Lady McElroy Wool Cashmere Coating Fabric Dove Grey",
             "category": 15,
             "price": 25.99,
@@ -1575,7 +1575,7 @@
         "pk": 124,
         "model": "products.product",
         "fields": {
-            "product_code": "303103"
+            "product_code": "303103",
             "name": "Cashmere Wool Coating Fabric",
             "category": 15,
             "price": 24.99,
@@ -1587,7 +1587,7 @@
         "pk": 125,
         "model": "products.product",
         "fields": {
-            "product_code": "303104"
+            "product_code": "303104",
             "name": "Lady McElroy Wool Blend Coating Fabric",
             "category": 15,
             "price": 24.99,
@@ -1599,7 +1599,7 @@
         "pk": 126,
         "model": "products.product",
         "fields": {
-            "product_code": "303105"
+            "product_code": "303105",
             "name": "Lady McElroy Reversible Wool Coating Fabric Black & Pewter",
             "category": 15,
             "price": 20.99,
@@ -1611,7 +1611,7 @@
         "pk": 127,
         "model": "products.product",
         "fields": {
-            "product_code": "304100"
+            "product_code": "304100",
             "name": "Woven Jacquard Lining Fabric",
             "category": 16,
             "price": 6.99,
@@ -1623,7 +1623,7 @@
         "pk": 128,
         "model": "products.product",
         "fields": {
-            "product_code": "304101"
+            "product_code": "304101",
             "name": "Woven Jacquard Lining Fabric",
             "category": 16,
             "price": 6.99,
@@ -1635,7 +1635,7 @@
         "pk": 129,
         "model": "products.product",
         "fields": {
-            "product_code": "304102"
+            "product_code": "304102",
             "name": "Woven Jacquard Lining Fabric",
             "category": 16,
             "price": 6.99,
@@ -1647,7 +1647,7 @@
         "pk": 130,
         "model": "products.product",
         "fields": {
-            "product_code": "304103"
+            "product_code": "304103",
             "name": "100% Bemburg Cupro Satin Lining Fabric",
             "category": 16,
             "price": 9.99,
@@ -1659,7 +1659,7 @@
         "pk": 131,
         "model": "products.product",
         "fields": {
-            "product_code": "304104"
+            "product_code": "304104",
             "name": "100% Bemburg Cupro Satin Lining Fabric",
             "category": 16,
             "price": 9.99,
@@ -1671,7 +1671,7 @@
         "pk": 132,
         "model": "products.product",
         "fields": {
-            "product_code": "304105"
+            "product_code": "304105",
             "name": "Habotai Lining Fabric",
             "category": 16,
             "price": 2.99,
@@ -1683,12 +1683,12 @@
         "pk": 133,
         "model": "products.product",
         "fields": {
-            "product_code": "304106"
+            "product_code": "304106",
             "name": "Habotai Lining Fabric",
             "category": 16,
             "price": 2.99,
             "image": "304106.jpg",
             "image_url": "https://www.minerva.com/mp/1263190/100-bemburg-cupro-satin-lining-fabric-beige&variant=1263167"
         }
-    },
+    }
 ]

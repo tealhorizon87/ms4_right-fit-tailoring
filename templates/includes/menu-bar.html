@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="menu-bar">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item dropdown d-md-none mx-5">
-        <form>
+        <form class="search-bar">
           <div class="input-group">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -24,7 +24,7 @@
               Ready To Wear
             </div>
             <div class="dropdown-menu" aria-labelledby="readyToWearMenu">
-              <a class="dropdown-item" href="#">All Products</a>
+              <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
               <a class="dropdown-item" href="#">Shirts</a>
               <a class="dropdown-item" href="#">Trousers & Shorts</a>
               <a class="dropdown-item" href="#">Jackets & Coats</a>

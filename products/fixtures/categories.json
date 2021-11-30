@@ -3,7 +3,7 @@
         "pk": 1,
         "model": "products.category",
         "fields": {
-            "name": "shirts",
+            "category_name": "shirts",
             "friendly_name": "Shirts"
         }
     },
@@ -11,7 +11,7 @@
         "pk": 2,
         "model": "products.category",
         "fields": {
-            "name": "trousers",
+            "category_name": "trousers",
             "friendly_name": "Trousers"
         }
     },
@@ -19,7 +19,7 @@
         "pk": 3,
         "model": "products.category",
         "fields": {
-            "name": "jackets",
+            "category_name": "jackets",
             "friendly_name": "Jackets"
         }
     },
@@ -27,7 +27,7 @@
         "pk": 4,
         "model": "products.category",
         "fields": {
-            "name": "waistcoats",
+            "category_name": "waistcoats",
             "friendly_name": "Waistcoats"
         }
     },
@@ -35,7 +35,7 @@
         "pk": 5,
         "model": "products.category",
         "fields": {
-            "name": "shorts",
+            "category_name": "shorts",
             "friendly_name": "Shorts"
         }
     },
@@ -43,7 +43,7 @@
         "pk": 6,
         "model": "products.category",
         "fields": {
-            "name": "suits",
+            "category_name": "suits",
             "friendly_name": "Suits"
         }
     },
@@ -51,7 +51,7 @@
         "pk": 7,
         "model": "products.category",
         "fields": {
-            "name": "coats",
+            "category_name": "coats",
             "friendly_name": "Coats"
         }
     },
@@ -59,7 +59,7 @@
         "pk": 8,
         "model": "products.category",
         "fields": {
-            "name": "cufflinks",
+            "category_name": "cufflinks",
             "friendly_name": "Cufflinks"
         }
     },
@@ -67,7 +67,7 @@
         "pk": 9,
         "model": "products.category",
         "fields": {
-            "name": "ties",
+            "category_name": "ties",
             "friendly_name": "Ties"
         }
     },
@@ -75,7 +75,7 @@
         "pk": 10,
         "model": "products.category",
         "fields": {
-            "name": "braces",
+            "category_name": "braces",
             "friendly_name": "Braces"
         }
     },
@@ -83,7 +83,7 @@
         "pk": 11,
         "model": "products.category",
         "fields": {
-            "name": "belts",
+            "category_name": "belts",
             "friendly_name": "Belts"
         }
     },
@@ -91,7 +91,7 @@
         "pk": 12,
         "model": "products.category",
         "fields": {
-            "name": "shirt_material",
+            "category_name": "shirt_material",
             "friendly_name": "Shirting Material"
         }
     },
@@ -99,7 +99,7 @@
         "pk": 13,
         "model": "products.category",
         "fields": {
-            "name": "suit_material",
+            "category_name": "suit_material",
             "friendly_name": "Suit Material"
         }
     },
@@ -107,7 +107,7 @@
         "pk": 14,
         "model": "products.category",
         "fields": {
-            "name": "bottoms_material",
+            "category_name": "bottoms_material",
             "friendly_name": "Trousers & Shorts Material"
         }
     },
@@ -115,7 +115,7 @@
         "pk": 15,
         "model": "products.category",
         "fields": {
-            "name": "coat_material",
+            "category_name": "coat_material",
             "friendly_name": "Coat Material"
         }
     },
@@ -123,7 +123,7 @@
         "pk": 16,
         "model": "products.category",
         "fields": {
-            "name": "linings",
+            "category_name": "linings",
             "friendly_name": "Linings"
         }
     }
