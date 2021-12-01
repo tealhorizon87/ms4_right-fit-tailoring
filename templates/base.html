@@ -87,7 +87,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="container-fluid fixed-bottom">
+    <footer class="container-fluid">
       <div class="row text-center">
         <div class="col-12 col-sm-4 my-3 my-sm-auto">
           <a href="#" class="h5 white-font">Contact us</a>
@@ -113,5 +113,8 @@
         </div>
       </div>
     </footer>
+
+    {% block postload_js %}
+    {% endblock %}
   </body>
 </html>

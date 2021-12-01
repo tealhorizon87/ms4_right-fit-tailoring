@@ -7,4 +7,56 @@
       <div class="col"></div>
     </div>
   </div>
+  <div class="overlay"></div>
+
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col text-center">
+        <h2>All Products</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-end">
+      <div class="col-12 col-md-6 text-center">
+        <select name="sort-selector" id="sort-selector" class="custom-select w-50">
+          <option value="reset">Sort by...</option>
+          <option value="price_asc">Price (low to high)</option>
+          <option value="price_desc">Price (high to low)</option>
+          <option value="name_asc">Name (low to high)</option>
+          <option value="name_desc">Name (high to low)</option>
+          <option value="category_asc">Category (low to high)</option>
+          <option value="category_desc">Category (high to low)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-1">
+        <div class="row">
+          {% for product in products %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
+              <div class="card h-100 product-card border-0">
+                <a href="">
+                  <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
+                </a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <p class="lead">{{ product.name }}</p>
+                      <a href="" class="card-subtitle dark-font">
+                        <i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <p class="font-weight-bold">£{{ product.price }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
