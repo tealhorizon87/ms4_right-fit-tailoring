@@ -37,9 +37,9 @@
           </a>
         </div>
         <div class="col col-lg-4 my-auto d-none d-md-block">
-          <form class="search-bar">
+          <form class="search-bar" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control" type="search" placeholder="Search" name="q" aria-label="Search">
               <div class="input-group-append">
                 <button class="btn" type="submit">
                   <i class="fas fa-search white-font"></i>

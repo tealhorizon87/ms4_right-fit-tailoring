@@ -80,6 +80,8 @@ footer {
   background-color: var(--my-dark-grey);
   color: var(--my-white);
   min-height: 6rem;
+  position: relative;
+  right: 0;
 }
 
 footer .row {
@@ -117,7 +119,10 @@ footer .row {
 }
 
 /* ---------------------------------------------Products */
-.product-card {
+.image-container {
+  height: 450px;
+  width: 300px;
+  overflow: hidden;
 }
 
 /* ----------------------------------------Media Queries */

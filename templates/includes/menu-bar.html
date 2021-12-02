@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="menu-bar">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item dropdown d-md-none mx-5">
-        <form class="search-bar">
+        <form class="search-bar" method="GET" action="{% url 'products' %}">
           <div class="input-group">
             <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -24,12 +24,15 @@
               Ready To Wear
             </div>
             <div class="dropdown-menu" aria-labelledby="readyToWearMenu">
-              <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
-              <a class="dropdown-item" href="#">Shirts</a>
-              <a class="dropdown-item" href="#">Trousers & Shorts</a>
-              <a class="dropdown-item" href="#">Jackets & Coats</a>
-              <a class="dropdown-item" href="#">Waistcoats</a>
-              <a class="dropdown-item" href="#">Suits</a>
+              <a class="dropdown-item"
+                href="{% url 'products' %}?category=shirts,trousers,shorts,jackets,coats,waistcoats,suits,cufflinks,ties,braces,belts">
+                All Products
+              </a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=shirts">Shirts</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=trousers,shorts">Trousers & Shorts</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=jackets,coats">Jackets & Coats</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=waistcoats">Waistcoats</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=suits">Suits</a>
             </div>
       </li>
       <li class="nav-item dropdown ml-5">
@@ -37,11 +40,11 @@
               Accessories
             </div>
             <div class="dropdown-menu" aria-labelledby="accessoriesMenu">
-              <a class="dropdown-item" href="#">All Accessories</a>
-              <a class="dropdown-item" href="#">Cufflinks</a>
-              <a class="dropdown-item" href="#">Ties</a>
-              <a class="dropdown-item" href="#">Braces</a>
-              <a class="dropdown-item" href="#">Belts</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=cufflinks,ties,beaces,belts">All Accessories</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=cufflinks">Cufflinks</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=ties">Ties</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=braces">Braces</a>
+              <a class="dropdown-item" href="{% url 'products' %}?category=belts">Belts</a>
             </div>
       </li>
       <li class="nav-item dropdown mx-5">
