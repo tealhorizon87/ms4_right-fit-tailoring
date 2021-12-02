@@ -20,13 +20,27 @@
     <div class="row justify-content-md-end">
       <div class="col-12 col-md-6 text-center">
         <select name="sort-selector" id="sort-selector" class="custom-select w-50">
-          <option value="reset">Sort by...</option>
-          <option value="price_asc">Price (low to high)</option>
-          <option value="price_desc">Price (high to low)</option>
-          <option value="name_asc">Name (low to high)</option>
-          <option value="name_desc">Name (high to low)</option>
-          <option value="category_asc">Category (low to high)</option>
-          <option value="category_desc">Category (high to low)</option>
+          <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>
+            Sort by...
+          </option>
+          <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>
+            Price (low to high)
+          </option>
+          <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>
+            Price (high to low)
+          </option>
+          <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>
+            Name (A to Z)
+          </option>
+          <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>
+            Name (Z to A)
+          </option>
+          <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+            Category (A to Z)
+          </option>
+          <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+            Category (Z to A)
+          </option>
         </select>
       </div>
     </div>
@@ -62,4 +76,29 @@
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block postload_js %}
+  <script type="text/javascript">
+    $("#sort-selector").change(function() {
+      var selector = $(this);
+      var currentUrl = new URL(window.location);
+
+      var sortSelection = selector.val();
+      if (sortSelection != "reset") {
+        var sort = sortSelection.split("_")[0];
+        var direction = sortSelection.split("_")[1];
+
+        currentUrl.searchParams.set("sort", sort);
+        currentUrl.searchParams.set("direction", direction);
+
+        window.location.replace(currentUrl);
+      } else {
+        currentUrl.searchParams.delete("sort");
+        currentUrl.searchParams.delete("direction");
+
+        window.location.replace(currentUrl);
+      }
+    })
+  </script>
 {% endblock %}
