@@ -13,6 +13,7 @@
     <div class="row">
       <div class="col text-center">
         <h2>All Products</h2>
+        <p>Ready to wear items from selected designers</p>
       </div>
     </div>
 
@@ -36,14 +37,20 @@
           {% for product in products %}
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
               <div class="card h-100 product-card border-0">
-                <a href="">
-                  <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
-                </a>
+                {% if product.image %}
+                  <a href="{% url 'product_detail' product.id %}">
+                    <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
+                  </a>
+                {% else %}
+                  <a href="">
+                    <img src="{{ MEDIA_URL }}no-image.png" class="card-img-top img-fluid" alt="{{ product.name }}">
+                  </a>
+                {% endif %}
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
                       <p class="lead">{{ product.name }}</p>
-                      <a href="" class="card-subtitle dark-font">
+                      <a href="" class="card-subtitle dark-font text-muted">
                         <i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}
                       </a>
                     </div>
