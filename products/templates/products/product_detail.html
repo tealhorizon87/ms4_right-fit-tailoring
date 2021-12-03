@@ -2,55 +2,50 @@
 {% load static %}
 
 {% block content %}
-  <div class="container header-spacer">
-    <div class="row">
-      <div class="col"></div>
+  <main>
+    <div class="container header-spacer">
+      <div class="row">
+        <div class="col"></div>
+      </div>
     </div>
-  </div>
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-10 offset-1">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-6 text-center">
-            <div class="image-container mx-auto">
-              {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank">
-                  <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
-                </a>
-              {% else %}
-                <a href="">
-                  <img src="{{ MEDIA_URL }}no-image.png" class="img-fluid" alt="{{ product.name }}">
-                </a>
-              {% endif %}
+    <div class="container-fluid pb-3">
+      <div class="row">
+        <div class="col-10 offset-1">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6 text-center">
+              <div class="image-container mx-auto">
+                {% if product.image %}
+                  <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}">
+                  </a>
+                {% else %}
+                  <a href="">
+                    <img src="{{ MEDIA_URL }}no-image.png" class="img-fluid" alt="{{ product.name }}">
+                  </a>
+                {% endif %}
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <h2 class="mb-4">{{ product.name }}</h2>
-            <p>{{ product.description }}</p>
-            <a href="{% url 'products' %}?category={{ product.category.category_name }}" class="card-subtitle dark-font text-muted">
-              <i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}
-            </a>
-            <p class="lead font-weight-bold mt-4">£{{ product.price }}</p>
-            <div class="d-flex flex-row">
-              <a href="" class="btn my-button mr-3">
-                <i class="fas fa-cart-plus"></i> Add to cart
+            <div class="col-12 col-md-6">
+              <h2 class="mb-4">{{ product.name }}</h2>
+              <p>{{ product.description }}</p>
+              <a href="{% url 'products' %}?category={{ product.category.category_name }}" class="card-subtitle dark-font text-muted">
+                <i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}
               </a>
-              <a href="{% url 'products' %}" class="btn my-button">
-                Keep shopping
-              </a>
+              <p class="lead font-weight-bold mt-4">£{{ product.price }}</p>
+              <div class="d-flex flex-row">
+                <a href="" class="btn my-button mr-3">
+                  <i class="fas fa-cart-plus"></i> Add to cart
+                </a>
+                <a href="{% url 'products' %}" class="btn my-button">
+                  Keep shopping
+                </a>
+              </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-  </div>
-{% endblock %}
-
-{% block postload_js %}
-  <script type="text/javascript">
-    $("footer").addClass("fixed-bottom");
-  </script>
+  </main>
 {% endblock %}

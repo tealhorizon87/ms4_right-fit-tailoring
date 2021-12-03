@@ -2,27 +2,23 @@
 {% load static %}
 
 {% block content %}
-  <div class="container header-spacer">
-    <div class="row">
-      <div class="col"></div>
+  <main>
+    <div class="container header-spacer">
+      <div class="row">
+        <div class="col"></div>
+      </div>
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-7 col-md-6">
-        <div class="jumbotron text-center bg-transparent white-font">
-          <h2>Welcome to Right Fit Tailoring</h2>
-          <p class="fancy-font">For all your tailoring needs</p>
-          <a href="{% url 'products' %}?category=shirts,trousers,shorts,jackets,coats,waistcoats,suits,cufflinks,ties,braces,belts"
-            class="btn my-button white-font">Get Dressed!</a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-7 col-md-6">
+          <div class="jumbotron text-center bg-transparent white-font">
+            <h2>Welcome to Right Fit Tailoring</h2>
+            <p class="fancy-font">For all your tailoring needs</p>
+            <a href="{% url 'products' %}?category=shirts,trousers,shorts,jackets,coats,waistcoats,suits,cufflinks,ties,braces,belts"
+              class="btn my-button white-font">Get Dressed!</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-{% endblock %}
-
-{% block postload_js %}
-  <script type="text/javascript">
-    $("footer").addClass("fixed-bottom");
-  </script>
+  </main>
 {% endblock %}

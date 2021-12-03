@@ -46,6 +46,10 @@ body {
   padding: 0.5rem 2rem;
 }
 
+main {
+  min-height: calc(100vh - 6rem);
+}
+
 /* -------------------------------------Background image */
 body {
   background: url("/media/hero-lg.jpg") no-repeat fixed;
