@@ -46,8 +46,8 @@ body {
   padding: 0.5rem 2rem;
 }
 
-main {
-  min-height: calc(100vh - 6rem);
+.header-spacer {
+  padding-top: 200px;
 }
 
 /* -------------------------------------Background image */
@@ -88,6 +88,14 @@ header {
   border-color: var(--my-grey);
 }
 
+.sub-logo {
+  font-size: 2.5rem;
+}
+
+.menu-button {
+  height: 2rem;
+}
+
 /* ----------------------------------------Footer styles */
 footer {
   background-color: var(--my-dark-grey);
@@ -100,12 +108,8 @@ footer .row {
 }
 
 /* --------------------------------------------Home page */
-.header-spacer {
-  padding-top: 180px;
-}
-
 .jumbotron {
-  position: fixed;
+  /* position: fixed; */
   margin-top: 120px;
 }
 
@@ -132,7 +136,25 @@ smaller screens */
   body {
     background: url("/media/hero-lg.jpg") no-repeat fixed;
     background-size: cover;
-    background-position: -450px 120px;
+    background-position: -250px 100px;
     height: calc(100vh - 152px);
+  }
+
+  .sub-logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .jumbotron {
+    margin-top: 0;
+  }
+
+  .fixed-bottom {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1030;
   }
 }

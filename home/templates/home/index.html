@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-  <main>
+  <main class="pb-5 pb-sm-0">
     <div class="container header-spacer">
       <div class="row">
         <div class="col"></div>
@@ -10,8 +10,8 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-7 col-md-6">
-          <div class="jumbotron text-center bg-transparent white-font">
+        <div class="col-12 col-md-6">
+          <div class="jumbotron text-center bg-transparent white-font px-0">
             <h2>Welcome to Right Fit Tailoring</h2>
             <p class="fancy-font">For all your tailoring needs</p>
             <a href="{% url 'products' %}?category=shirts,trousers,shorts,jackets,coats,waistcoats,suits,cufflinks,ties,braces,belts"
@@ -21,4 +21,10 @@
       </div>
     </div>
   </main>
+{% endblock %}
+
+{% block postload_js %}
+  <script>
+    $("footer").addClass("fixed-bottom");
+  </script>
 {% endblock %}
