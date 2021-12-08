@@ -168,6 +168,11 @@ smaller screens */
   .sub-logo {
     font-size: 1.5rem;
   }
+
+  .cart-display {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 @media (max-width: 568px) {
@@ -177,5 +182,10 @@ smaller screens */
 
   .main-content {
     padding-bottom: 11rem;
+  }
+
+  .cart-display {
+    display: flex;
+    justify-content: space-between;
   }
 }
