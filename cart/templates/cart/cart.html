@@ -19,33 +19,33 @@
           </div>
         </div>
         <div class="row">
-          {% if cart_contents %}
+          {% if cart_items %}
             <div class="col-10 col-sm-12 offset-1 offset-sm-0">
-              {% for item in cart_contents %}
-                <div class="row">
-                  <div class="col-3">
-                    {{ item.image }}
+              {% for item in cart_items %}
+                <div class="row mb-2">
+                  <div class="col-3 text-center">
+                    <img src="{{ item.product.image.url }}" height="150px" width="100px" alt="{{ item.product.name }}">
                   </div>
                   <div class="col-5">
-                    <p>{{ item.name }}</p>
-                    <p>{{ item.category }}</p>
+                    <p>{{ item.product.name }}</p>
+                    <p><i class="fas fa-list mr-1"></i>{{ item.product.category.friendly_name }}</p>
                   </div>
                   <div class="col-2">
-                    {{ item.price }}
+                    £{{ item.product.price }}
                   </div>
                   <div class="col-2">
-                    {{ item.price }}
+                    £{{ item.product.price }}
                   </div>
-                  <hr>
                 </div>
+                <hr>
               {% endfor %}
-              <div class="row">
-                <div class="col-4 flex-end">
-                  <p>Cart Total (# items): £#</p>
+              <div class="row mb-4">
+                <div class="col-4 offset-7 text-right">
+                  <p>Cart Total ({{ item_count }} items): <strong>£{{ total }}</strong></p>
                   <a href="{% url 'products' %}" class="btn my-button">
                     Keep shopping
                   </a>
-                  <a href="" class="btn my-button mr-3">
+                  <a href="" class="btn my-button">
                     Checkout
                   </a>
                 </div>
@@ -63,10 +63,4 @@
       </div>
     </div>
   </div>
-{% endblock %}
-
-{% block postload_js %}
-  <script>
-    $("footer").addClass("fixed-bottom");
-  </script>
 {% endblock %}

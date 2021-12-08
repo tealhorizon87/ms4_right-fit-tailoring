@@ -189,7 +189,8 @@ Back to [Table of Contents](#table-of-contents)
   - All code was written by myself or taken from the [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) documentation, with inspiration taken from the Code Institute walkthrough projects
   - The 'no-image' image was taken from [Free Icons PNG](https://www.freeiconspng.com/)
   - All the products with their images and descriptions were taken from [Suit Direct](https://www.suitdirect.co.uk/)
-  - Background images were sourced from [Pixabay](https://pixabay.com/)
+  - The main background image was sourced from [Pixabay](https://pixabay.com/)
+  - The method and code for placing the footer correctly was taken from [freeCodeCamp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
 
 ### Acknowledgements
   - Thanks to my mentor for help, guidance and support during this project as always

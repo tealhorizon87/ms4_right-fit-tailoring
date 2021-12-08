@@ -29,90 +29,100 @@
     <title>Right Fit Tailoring {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fliud fixed-top">
-      <div class="row">
-        <div class="col-9 col-sm-8 col-md-4 text-lg-left my-auto p-0">
-          <a href="{% url 'home' %}" class="nav-link pr-0 pb-0 white-font">
-            <h1 class="logo d-inline">Right Fit</h1><span class="logo sub-logo"> Tailoring</span>
-          </a>
-        </div>
-        <div class="col-md-4 my-auto d-none d-md-block">
-          <form class="search-bar" method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-              <input class="form-control" type="search" placeholder="Search" name="q" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn" type="submit">
-                  <i class="fas fa-search white-font"></i>
-                </button>
-              </div>
+    <div class="page-container">
+      <div class="main-content">
+        <header class="container-fliud fixed-top">
+          <div class="row">
+            <div class="col-9 col-sm-8 col-md-4 text-lg-left my-auto p-0">
+              <a href="{% url 'home' %}" class="nav-link pr-0 pb-0 white-font">
+                <h1 class="logo d-inline">Right Fit</h1><span class="logo sub-logo"> Tailoring</span>
+              </a>
             </div>
-          </form>
-        </div>
-        <div class="col-3 col-sm-4 col-md-4 my-auto">
-          <ul class="list-inline text-left text-sm-center my-0">
-            <li class="list-inline-item d-none d-sm-inline-block mr-sm-3">
-              <a href="#" class="nav-link p-0 white-font">
-                <div class="text-center">
-                  <div><i class="fas fa-user"></i></div>
-                  <p class="my-0">Log in/Register</p>
+            <div class="col-md-4 my-auto d-none d-md-block">
+              <form class="search-bar" method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                  <input class="form-control" type="search" placeholder="Search" name="q" aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn" type="submit">
+                      <i class="fas fa-search white-font"></i>
+                    </button>
+                  </div>
                 </div>
-              </a>
-            </li>
-            <li class="list-inline-item ml-sm-3">
-              <a href="{% url 'cart' %}" class="nav-link p-0 white-font">
-                <div class="text-center">
-                  <div><i class="fas fa-shopping-cart"></i></div>
-                  <p class="my-0">£0.00</p>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <nav class="navbar navbar-expand-md w-100 mx-auto p-0">
-          <button class="navbar-toggler mx-auto menu-button border-0" type="button" data-toggle="collapse" data-target="#menu-bar" aria-controls="menu-bar" aria-expanded="false" aria-label="Toggle navigation">
-            <p class="white-font mb-0">Menu <i class="fas fa-chevron-down"></i></p>
-          </button>
-          {% include 'includes/menu-bar.html' %}
-        </nav>
-      </div>
-      <div class="row">
-        <div class="col text-center offer-banner">
-          <p class="mt-1 mb-0">BUY A MADE-TO-MEASURE SHIRT AND GET A MATCHING FACEMASK FREE!</p>
-        </div>
-      </div>
-    </header>
+              </form>
+            </div>
+            <div class="col-3 col-sm-4 col-md-4 my-auto">
+              <ul class="list-inline text-left text-sm-center my-0">
+                <li class="list-inline-item d-none d-sm-inline-block mr-sm-3">
+                  <a href="#" class="nav-link p-0 white-font">
+                    <div class="text-center">
+                      <div><i class="fas fa-user"></i></div>
+                      <p class="my-0">Log in/Register</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="list-inline-item ml-sm-3">
+                  <a href="{% url 'cart' %}" class="nav-link p-0 white-font">
+                    <div class="text-center">
+                      <div><i class="fas fa-shopping-cart"></i></div>
+                      <p class="my-0">
+                        {% if cart_items %}
+                          £{{ total }}
+                        {% else %}
+                          £0.00
+                        {% endif %}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <nav class="navbar navbar-expand-md w-100 mx-auto p-0">
+              <button class="navbar-toggler mx-auto menu-button border-0" type="button" data-toggle="collapse" data-target="#menu-bar" aria-controls="menu-bar" aria-expanded="false" aria-label="Toggle navigation">
+                <p class="white-font mb-0">Menu <i class="fas fa-chevron-down"></i></p>
+              </button>
+              {% include 'includes/menu-bar.html' %}
+            </nav>
+          </div>
+          <div class="row">
+            <div class="col text-center offer-banner">
+              <p class="mt-1 mb-0">BUY A MADE-TO-MEASURE SHIRT AND GET A MATCHING FACEMASK FREE!</p>
+            </div>
+          </div>
+        </header>
 
-    {% block content %}
-    {% endblock %}
-
-    <footer class="container-fluid">
-      <div class="row text-center">
-        <div class="col-12 col-sm-4 my-3 my-sm-auto">
-          <a href="#" class="h5 white-font">Contact us</a>
-        </div>
-        <div class="col-12 col-sm-4 my-3 my-sm-auto">
-          <p class="mb-0">FOR EDUCATIONAL PURPOSES ONLY</p>
-        </div>
-        <div class="col-12 col-sm-4 my-3 my-sm-auto">
-          <ul class="list-inline h5">
-            <li class="list-inline-item">
-              <i class="fab fa-facebook-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-instagram-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-pinterest-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-twitter-square"></i>
-            </li>
-          </ul>
-        </div>
+        {% block content %}
+        {% endblock %}
       </div>
-    </footer>
+
+      <footer class="container-fluid">
+        <div class="row text-center">
+          <div class="col-12 col-sm-4 my-3 my-sm-auto">
+            <a href="#" class="h5 white-font">Contact us</a>
+          </div>
+          <div class="col-12 col-sm-4 my-3 my-sm-auto">
+            <p class="mb-0">FOR EDUCATIONAL PURPOSES ONLY</p>
+          </div>
+          <div class="col-12 col-sm-4 my-3 my-sm-auto">
+            <ul class="list-inline h5">
+              <li class="list-inline-item">
+                <i class="fab fa-facebook-square"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="fab fa-instagram-square"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="fab fa-pinterest-square"></i>
+              </li>
+              <li class="list-inline-item">
+                <i class="fab fa-twitter-square"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     {% block postload_js %}
     {% endblock %}

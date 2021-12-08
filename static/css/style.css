@@ -58,6 +58,19 @@ body {
   padding-top: 200px;
 }
 
+/* ATTRIBUTION: This code is used to force the footer to the
+bottom of the page, or below contnet.
+Code sourced from freeCodeCamp; see README Acknowledgments */
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding-bottom: 6rem;
+}
+/* END ATTRIBUTION */
+
 /* -------------------------------------Background image */
 body {
   background: url("/media/hero-lg.jpg") no-repeat fixed;
@@ -109,6 +122,8 @@ footer {
   background-color: var(--my-dark-grey);
   color: var(--my-white);
   min-height: 6rem;
+  position: absolute;
+  bottom: 0;
 }
 
 footer .row {
@@ -136,6 +151,8 @@ footer .row {
   overflow: hidden;
 }
 
+/* ------------------------------------------Cart styles */
+
 /* ----------------------------------------Media Queries */
 
 /* adjust the position of background image on medium and
@@ -158,11 +175,7 @@ smaller screens */
     margin-top: 0;
   }
 
-  .fixed-bottom {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    z-index: 1030;
+  .main-content {
+    padding-bottom: 11rem;
   }
 }
