@@ -32,7 +32,10 @@
               </div>
               <div class="col-12 col-sm-8 col-md-4">
                 <p>{{ item.product.name }}</p>
-                <p><i class="fas fa-list mr-1"></i>{{ item.product.category.friendly_name }}</p>
+                <p class="text-muted"><i class="fas fa-list mr-1"></i>{{ item.product.category.friendly_name }}</p>
+                {% if item.product.sizeable %}
+                  <p>Size: {{ item.size|upper }}</p>
+                {% endif %}
               </div>
               <div class="col-12 col-md-2 cart-display">
                 <span class="d-md-none pr-2">Price:</span>

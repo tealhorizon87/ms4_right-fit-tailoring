@@ -21,6 +21,7 @@ class Product(models.Model):
     product_code = models.IntegerField(null=False, blank=False)
     name = models.CharField(max_length=254, null=False, blank=False)
     description = models.TextField()
+    sizeable = models.BooleanField(default=False, null=True, blank=True)
     category = models.ForeignKey("Category", null=True, blank=True, on_delete=models.SET_NULL)
     price = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False)
     image = models.ImageField(null=True, blank=True)
