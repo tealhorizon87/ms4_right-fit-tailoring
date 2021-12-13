@@ -54,6 +54,22 @@ body {
   padding: 0.5rem 2rem;
 }
 
+.my-button:hover {
+  background-color: var(--my-white);
+  color: var(--my-blue);
+  border: 1px solid var(--my-blue);
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+}
+
+.my-button-reverse:hover {
+  background-color: var(--my-blue);
+  color: var(--my-white);
+  border: 1px solid var(--my-white);
+  border-radius: 2rem;
+  padding: 0.5rem 2rem;
+}
+
 .header-spacer {
   padding-top: 200px;
 }

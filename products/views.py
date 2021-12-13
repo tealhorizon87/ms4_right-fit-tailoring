@@ -35,6 +35,7 @@ def all_products(request):
         if "category" in request.GET:
             categories = request.GET["category"].split(",")
             products = products.filter(category__category_name__in=categories)
+            categories = Category.objects.filter(category_name__in=categories)
 
     current_sorting = f"{sort}_{direction}"
 
@@ -42,6 +43,7 @@ def all_products(request):
         "products": products,
         "search_term": query,
         "current_sorting": current_sorting,
+        "categories": categories,
     }
 
     return render(request, "products/products_main.html", context)
