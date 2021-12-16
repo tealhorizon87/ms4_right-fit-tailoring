@@ -12,7 +12,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col text-center">
-        <h2>{{ product_heading }}</h2>
+        <h2>
+          {% if product_heading %}
+            {{ product_heading }}
+          {% else %}
+            All Products
+          {% endif %}
+          </h2>
         <p>Ready to wear items from selected designers</p>
       </div>
     </div>

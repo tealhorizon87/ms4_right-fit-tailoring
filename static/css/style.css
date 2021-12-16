@@ -168,6 +168,11 @@ footer .row {
 }
 
 /* ------------------------------------------Cart styles */
+.quantity-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 /* ----------------------------------------Media Queries */
 
