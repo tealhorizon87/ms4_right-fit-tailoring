@@ -10,6 +10,7 @@ def all_products(request):
     query = None
     sort = None
     direction = None
+    product_heading = None
 
     if request.GET:
         if "sort" in request.GET:
@@ -35,7 +36,13 @@ def all_products(request):
         if "category" in request.GET:
             categories = request.GET["category"].split(",")
             products = products.filter(category__category_name__in=categories)
-            categories = Category.objects.filter(category_name__in=categories)
+
+            if len(categories) == 2:
+                product_heading = f"{categories[0].title()} & {categories[1].title()}"
+            elif len(categories) == 1:
+                product_heading = categories[0].title()
+            else:
+                product_heading = "All Products"
 
     current_sorting = f"{sort}_{direction}"
 
@@ -43,7 +50,7 @@ def all_products(request):
         "products": products,
         "search_term": query,
         "current_sorting": current_sorting,
-        "categories": categories,
+        "product_heading": product_heading,
     }
 
     return render(request, "products/products_main.html", context)
