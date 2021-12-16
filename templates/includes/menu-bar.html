@@ -52,11 +52,11 @@
               Made to Measure
             </div>
             <div class="dropdown-menu" aria-labelledby="madeToMeasureMenu">
-              <a class="dropdown-item" href="#">Shirts</a>
-              <a class="dropdown-item" href="#">Trousers & Shorts</a>
-              <a class="dropdown-item" href="#">Jackets & Coats</a>
-              <a class="dropdown-item" href="#">Waistcoats</a>
-              <a class="dropdown-item" href="#">Suits</a>
+              <a class="dropdown-item" href="{% url 'made_to_measure' %}?category=shirt_material">Shirts</a>
+              <a class="dropdown-item" href="{% url 'made_to_measure' %}?category=bottoms_material,suit_material">Trousers & Shorts</a>
+              <a class="dropdown-item" href="{% url 'made_to_measure' %}?category=suit_material,coat_material">Jackets & Coats</a>
+              <a class="dropdown-item" href="{% url 'made_to_measure' %}?category=suit_material">Waistcoats</a>
+              <a class="dropdown-item" href="{% url 'made_to_measure' %}?category=suit_material">Suits</a>
             </div>
       </li>
       <li class="ml-5 ml-md-0">

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container header-spacer">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center">
+        <h2>Made To Measure</h2>
+        <p>Select a fabric below</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-end">
+      <div class="col-12 col-md-6 text-center">
+        <select name="garment-selector" id="garment-selector" class="custom-select w-50">
+          <option value="shirts" {% if current_garment == 'None' %}selected{% endif %}>
+            Shirts
+          </option>
+          <option value="trousers_shorts" {% if current_garment == 'trousers_shorts' %}selected{% endif %}>
+            Trousers & Shorts
+          </option>
+          <option value="jackets_coats" {% if current_garment == 'jackets_coats' %}selected{% endif %}>
+            Jackets & Coats
+          </option>
+          <option value="waistcoats" {% if current_garment == 'waistcoats' %}selected{% endif %}>
+            Waistcoats
+          </option>
+          <option value="suits" {% if current_garment == 'suits' %}selected{% endif %}>
+            Suits
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-10 offset-1">
+        <div class="row">
+          {% for product in products %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
+              <div class="card h-100 product-card border-0">
+                {% if product.image %}
+                  <a href="{% url 'product_detail' product.id %}">
+                    <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
+                  </a>
+                {% else %}
+                  <a href="">
+                    <img src="{{ MEDIA_URL }}no-image.png" class="card-img-top img-fluid" alt="{{ product.name }}">
+                  </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                  <p class="lead mb-0">{{ product.name }}</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                  <a href="{% url 'products' %}?category={{ product.category.category_name }}" class="card-subtitle dark-font text-muted">
+                    <i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}
+                  </a>
+                  <p class="font-weight-bold mt-3">£{{ product.price }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+{% endblock %}

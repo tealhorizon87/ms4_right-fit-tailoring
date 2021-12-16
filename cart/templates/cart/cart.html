@@ -41,15 +41,17 @@
                 <span class="d-md-none pr-2">Price:</span>
                 <span>£{{ item.product.price }}</span>
               </div>
-              <div class="col-12 col-md-2 cart-display">
-                <span class="d-md-none pr-2">Quantity:</span>
+              <div class="col-12 col-md-2">
                 <form action="{% url 'update_cart' item.item_id %}" method="POST" class="h-100">
                   {% csrf_token %}
-                  <input class="form-control" type="number" name="quantity"
-                    value="{{ item.quantity }}" min="1" max="10"
-                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                  <button type="submit" class="float-left border-0 bg-transparent"><small>Update</small></button>
-                  <a href="{% url 'remove_from_cart' item.item_id %}" class="float-right" id="remove_{{ item.item_id }}"
+                  <div class="input-group">
+                    <span class="d-md-none pr-2 input-group-prepend">Quantity:</span>
+                    <input class="form-control" type="number" name="quantity"
+                      value="{{ item.quantity }}" min="1" max="10"
+                      data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                  </div>
+                  <button type="submit" class="border-0 bg-transparent px-0"><small>Update</small></button>
+                  <a href="{% url 'remove_from_cart' item.item_id %}" class="float-right dark-font" id="remove_{{ item.item_id }}"
                     data-product_size="{{ item.size }}"><small>Remove</small></a>
                   {% if item.product.sizeable %}
                     <input type="hidden" name="product_size" value="{{ item.size }}">

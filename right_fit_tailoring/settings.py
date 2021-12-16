@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'cart',
+    'made_to_measure',
 ]
 
 MIDDLEWARE = [
