@@ -12,30 +12,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col text-center">
-        <h2>Made To Measure</h2>
+        <h2>Made To Measure - {{ garment }}</h2>
         <p>Select a fabric below</p>
-      </div>
-    </div>
-
-    <div class="row justify-content-md-end">
-      <div class="col-12 col-md-6 text-center">
-        <select name="garment-selector" id="garment-selector" class="custom-select w-50">
-          <option value="shirts" {% if current_garment == 'None' %}selected{% endif %}>
-            Shirts
-          </option>
-          <option value="trousers_shorts" {% if current_garment == 'trousers_shorts' %}selected{% endif %}>
-            Trousers & Shorts
-          </option>
-          <option value="jackets_coats" {% if current_garment == 'jackets_coats' %}selected{% endif %}>
-            Jackets & Coats
-          </option>
-          <option value="waistcoats" {% if current_garment == 'waistcoats' %}selected{% endif %}>
-            Waistcoats
-          </option>
-          <option value="suits" {% if current_garment == 'suits' %}selected{% endif %}>
-            Suits
-          </option>
-        </select>
       </div>
     </div>
 
@@ -69,6 +47,6 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 {% endblock %}
