@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from products.models import Product
+from products.models import Product, Category
 
 
 def made_to_measure(request):
@@ -24,11 +24,23 @@ def mtm_form(request, product_id):
     """ A view to display and process the made to measure form """
 
     product = get_object_or_404(Product, pk=product_id)
+    garment = request.GET["garment"]
+    tops = ["Shirts", "Jackets", "Coats", "Waistcoats"]
+    bottoms = ["Trousers", "Shorts"]
     mtm_price = product.price * 3
+
+    if garment in tops:
+        required_measurements = "tops"
+    elif garment in bottoms:
+        required_measurements = "bottoms"
+    else:
+        required_measurements == "both"
 
     context = {
         "product": product,
         "mtm_price": mtm_price,
+        "garment": garment,
+        "required_measurements": required_measurements,
     }
 
     return render(request, "made_to_measure/mtm_form.html", context)

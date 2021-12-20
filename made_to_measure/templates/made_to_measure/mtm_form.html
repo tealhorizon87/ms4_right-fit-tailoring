@@ -33,26 +33,50 @@
                   <label for="height">Height:</label>
                   <input type="text" class="form-control" id="height">
                 </div>
-                <div class="form-group">
-                  <label for="neck">Neck:</label>
-                  <input type="text" class="form-control" id="neck">
-                  <label for="shoulder">Shoulder Width:</label>
-                  <input type="text" class="form-control" id="shoulder">
-                  <label for="chest">Chest:</label>
-                  <input type="text" class="form-control" id="chest">
-                  <label for="arm">Arm Length:</label>
-                  <input type="text" class="form-control" id="arm">
-                  <label for="back">Back:</label>
-                  <input type="text" class="form-control" id="back">
-                </div>
-                <div class="form-group">
-                  <label for="waist">Waist:</label>
-                  <input type="text" class="form-control" id="waist">
-                  <label for="hips">Hips:</label>
-                  <input type="text" class="form-control" id="hips">
-                  <label for="leg">Inside Leg:</label>
-                  <input type="text" class="form-control" id="leg">
-                </div>
+                {% if required_measurements == "tops" %}
+                  <div class="form-group">
+                    <label for="neck">Neck:</label>
+                    <input type="text" class="form-control" id="neck">
+                    <label for="shoulder">Shoulder Width:</label>
+                    <input type="text" class="form-control" id="shoulder">
+                    <label for="chest">Chest:</label>
+                    <input type="text" class="form-control" id="chest">
+                    <label for="arm">Arm Length:</label>
+                    <input type="text" class="form-control" id="arm">
+                    <label for="back">Back:</label>
+                    <input type="text" class="form-control" id="back">
+                  </div>
+                {% elif required_measurements == "bottoms" %}
+                  <div class="form-group">
+                    <label for="waist">Waist:</label>
+                    <input type="text" class="form-control" id="waist">
+                    <label for="hips">Hips:</label>
+                    <input type="text" class="form-control" id="hips">
+                    <label for="leg">Inside Leg:</label>
+                    <input type="text" class="form-control" id="leg">
+                  </div>
+                {% elif required_measurements == "both" %}
+                  <div class="form-group">
+                    <label for="neck">Neck:</label>
+                    <input type="text" class="form-control" id="neck">
+                    <label for="shoulder">Shoulder Width:</label>
+                    <input type="text" class="form-control" id="shoulder">
+                    <label for="chest">Chest:</label>
+                    <input type="text" class="form-control" id="chest">
+                    <label for="arm">Arm Length:</label>
+                    <input type="text" class="form-control" id="arm">
+                    <label for="back">Back:</label>
+                    <input type="text" class="form-control" id="back">
+                  </div>
+                  <div class="form-group">
+                    <label for="waist">Waist:</label>
+                    <input type="text" class="form-control" id="waist">
+                    <label for="hips">Hips:</label>
+                    <input type="text" class="form-control" id="hips">
+                    <label for="leg">Inside Leg:</label>
+                    <input type="text" class="form-control" id="leg">
+                  </div>
+                {% endif %}
                 <div class="text-center">
                   <button type="submit" class="my-button">Submit</button>
                 </div>
