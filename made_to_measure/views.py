@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.contrib import messages
 from products.models import Product
 
 
@@ -19,3 +18,17 @@ def made_to_measure(request):
     }
 
     return render(request, "made_to_measure/made_to_measure.html", context)
+
+
+def mtm_form(request, product_id):
+    """ A view to display and process the made to measure form """
+
+    product = get_object_or_404(Product, pk=product_id)
+    mtm_price = product.price * 3
+
+    context = {
+        "product": product,
+        "mtm_price": mtm_price,
+    }
+
+    return render(request, "made_to_measure/mtm_form.html", context)
