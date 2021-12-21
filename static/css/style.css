@@ -216,6 +216,10 @@ smaller screens */
   .left-border {
     border: none;
   }
+
+  .mtm-display {
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 568px) {
@@ -230,5 +234,9 @@ smaller screens */
   .cart-display {
     display: flex;
     justify-content: space-between;
+  }
+
+  .mtm-display {
+    margin-bottom: 3rem;
   }
 }

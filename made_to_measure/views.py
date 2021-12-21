@@ -1,10 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from products.models import Product, Category
+from django.core.mail import send_mail
+from .forms import MtmForm
 
 
 def made_to_measure(request):
     """ A view to display the made to measure form """
-    print(request.GET)
+
     products = Product.objects.all()
     garment = request.GET["garment"]
 
@@ -28,6 +30,7 @@ def mtm_form(request, product_id):
     tops = ["Shirts", "Jackets", "Coats", "Waistcoats"]
     bottoms = ["Trousers", "Shorts"]
     mtm_price = product.price * 3
+    form = MtmForm()
 
     if garment in tops:
         required_measurements = "tops"
@@ -40,6 +43,7 @@ def mtm_form(request, product_id):
         "product": product,
         "mtm_price": mtm_price,
         "garment": garment,
+        "form": form,
         "required_measurements": required_measurements,
     }
 

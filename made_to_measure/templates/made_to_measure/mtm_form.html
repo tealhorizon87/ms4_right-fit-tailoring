@@ -23,60 +23,51 @@
     <div class="row">
       <div class="col-12 col-md-10 offset-md-1">
         <div class="row">
-          <div class="col-12 col-md-6 text-center text-md-left mtm-display">
-            <h3 class="mb-3">Measurements</h3>
-            <p>All measurements in centimetres</p>
-
+          <div class="col-12 col-md-6 mtm-display order-1 order-md-0">
             <div class="col-10 offset-1">
+              <h3 class="mb-3">Measurements</h3>
+              <p>All measurements in centimetres</p>
               <form class="mtm-form">
                 <div class="form-group">
-                  <label for="height">Height:</label>
-                  <input type="text" class="form-control" id="height">
+                  {{ form.height | as_crispy_field }}
                 </div>
                 {% if required_measurements == "tops" %}
                   <div class="form-group">
-                    <label for="neck">Neck:</label>
-                    <input type="text" class="form-control" id="neck">
-                    <label for="shoulder">Shoulder Width:</label>
-                    <input type="text" class="form-control" id="shoulder">
-                    <label for="chest">Chest:</label>
-                    <input type="text" class="form-control" id="chest">
-                    <label for="arm">Arm Length:</label>
-                    <input type="text" class="form-control" id="arm">
-                    <label for="back">Back:</label>
-                    <input type="text" class="form-control" id="back">
+                    {{ form.neck | as_crispy_field }}
+                    {{ form.shoulder | as_crispy_field }}
+                    {{ form.chest | as_crispy_field }}
+                    {{ form.arm | as_crispy_field }}
+                    {{ form.back | as_crispy_field }}
                   </div>
                 {% elif required_measurements == "bottoms" %}
                   <div class="form-group">
-                    <label for="waist">Waist:</label>
-                    <input type="text" class="form-control" id="waist">
-                    <label for="hips">Hips:</label>
-                    <input type="text" class="form-control" id="hips">
-                    <label for="leg">Inside Leg:</label>
-                    <input type="text" class="form-control" id="leg">
+                    {{ form.waist | as_crispy_field }}
+                    {{ form.hips | as_crispy_field }}
+                    {{ form.leg | as_crispy_field }}
                   </div>
                 {% elif required_measurements == "both" %}
                   <div class="form-group">
-                    <label for="neck">Neck:</label>
-                    <input type="text" class="form-control" id="neck">
-                    <label for="shoulder">Shoulder Width:</label>
-                    <input type="text" class="form-control" id="shoulder">
-                    <label for="chest">Chest:</label>
-                    <input type="text" class="form-control" id="chest">
-                    <label for="arm">Arm Length:</label>
-                    <input type="text" class="form-control" id="arm">
-                    <label for="back">Back:</label>
-                    <input type="text" class="form-control" id="back">
+                    {{ form.neck | as_crispy_field }}
+                    {{ form.shoulder | as_crispy_field }}
+                    {{ form.chest | as_crispy_field }}
+                    {{ form.arm | as_crispy_field }}
+                    {{ form.back | as_crispy_field }}
                   </div>
                   <div class="form-group">
-                    <label for="waist">Waist:</label>
-                    <input type="text" class="form-control" id="waist">
-                    <label for="hips">Hips:</label>
-                    <input type="text" class="form-control" id="hips">
-                    <label for="leg">Inside Leg:</label>
-                    <input type="text" class="form-control" id="leg">
+                    {{ form.waist | as_crispy_field }}
+                    {{ form.hips | as_crispy_field }}
+                    {{ form.leg | as_crispy_field }}
                   </div>
                 {% endif %}
+                <h4 class="mt-5">Contact Details</h4>
+                <div class="form-group">
+                  {{ form.name | as_crispy_field }}
+                  {{ form.email | as_crispy_field }}
+                  {{ form.phone | as_crispy_field }}
+                </div>
+
+                <input type="hidden" name="material" value="{{ product }}">
+
                 <div class="text-center">
                   <button type="submit" class="my-button">Submit</button>
                 </div>
@@ -84,7 +75,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6 text-center text-md-left mtm-display left-border">
+          <div class="col-12 col-md-6 mtm-display left-border order-0 order-md-1">
             <h3 class="mb-3">Selected Fabric</h3>
             <div>
               {% if product.image %}
@@ -100,6 +91,10 @@
             <h4 class="my-4">{{ product.name }}</h4>
             <p class="mt-4">£{{ product.price }} <span class="text-muted">per metre</span></p>
             <p class="lead mt-4">Estimated Total: <span class="font-weight-bold">£{{ mtm_price }}</span></p>
+            <p class="text-muted">
+              <span class="text-danger d-block">YOU WILL NOT BE CHARGED YET FOR THIS SERVICE</span>
+              <small>One of our team will contact you with the final price and ways to pay</small>
+            </p>
           </div>
         </div>
       </div>
