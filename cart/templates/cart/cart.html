@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block content %}
   <div class="container header-spacer">
@@ -60,7 +61,7 @@
               </div>
               <div class="col-12 col-md-2 cart-display">
                 <span class="d-md-none pr-2">Subtotal:</span>
-                <span><strong>£{{ item.product.price }}</strong></span>
+                <span><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></span>
               </div>
             </div>
             <hr>
