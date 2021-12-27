@@ -27,7 +27,8 @@
             <div class="col-10 offset-1">
               <h3 class="mb-3">Measurements</h3>
               <p>All measurements in centimetres</p>
-              <form class="mtm-form">
+              <form class="mtm-form" method="POST" action="{% url 'mtm_form' product.id %}">
+                {% csrf_token %}
                 <div class="form-group">
                   {{ form.height | as_crispy_field }}
                 </div>
@@ -66,7 +67,8 @@
                   {{ form.phone | as_crispy_field }}
                 </div>
 
-                <input type="hidden" name="material" value="{{ product }}">
+                <input type="hidden" name="product" value="{{ product }}">
+                <input type="hidden" name="garment" value="{{ garment }}">
 
                 <div class="text-center">
                   <button type="submit" class="my-button">Submit</button>

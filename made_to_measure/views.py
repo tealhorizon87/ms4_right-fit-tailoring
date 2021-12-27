@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from products.models import Product, Category
 from django.core.mail import send_mail
 from .forms import MtmForm
+from .models import MtmOrder
 
 
 def made_to_measure(request):
@@ -25,19 +26,36 @@ def made_to_measure(request):
 def mtm_form(request, product_id):
     """ A view to display and process the made to measure form """
 
-    product = get_object_or_404(Product, pk=product_id)
-    garment = request.GET["garment"]
-    tops = ["Shirts", "Jackets", "Coats", "Waistcoats"]
-    bottoms = ["Trousers", "Shorts"]
+    product = Product.objects.get(id=product_id)
     mtm_price = product.price * 3
-    form = MtmForm()
 
-    if garment in tops:
-        required_measurements = "tops"
-    elif garment in bottoms:
-        required_measurements = "bottoms"
+    if request.method == "POST":
+
+        form_data = {
+            "order_total": mtm_price,
+        }
+        for entry in request.POST:
+            if entry == "product":
+                form_data["product"] = product
+            elif entry != "csrfmiddlewaretoken":
+                form_data[entry] = request.POST[entry]
+
+        form = MtmForm(form_data)
+        form.save()
+
+        return redirect(reverse("products"))
     else:
-        required_measurements == "both"
+        garment = request.GET["garment"]
+        form = MtmForm()
+        tops = ["Shirts", "Jackets", "Coats", "Waistcoats"]
+        bottoms = ["Trousers", "Shorts"]
+
+        if garment in tops:
+            required_measurements = "tops"
+        elif garment in bottoms:
+            required_measurements = "bottoms"
+        else:
+            required_measurements = "both"
 
     context = {
         "product": product,

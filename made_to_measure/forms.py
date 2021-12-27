@@ -1,7 +1,14 @@
 from django import forms
+from .models import MtmOrder
 
 
-class MtmForm(forms.Form):
+class MtmForm(forms.ModelForm):
+    class Meta:
+        model = MtmOrder
+        fields = ("name", "email", "phone","height",
+                  "neck", "shoulder", "chest",
+                  "arm", "back", "waist", "hips", "leg",
+                  "garment", "product", "order_total")
 
     def __init__(self, *args, **kwargs):
         """
@@ -22,6 +29,9 @@ class MtmForm(forms.Form):
             "name": "Full Name",
             "email": "Email",
             "phone": "Tel",
+            "garment": "gamrent",
+            "product": "product",
+            "order_total": "order_total",
         }
 
         for field in self.fields:
@@ -31,17 +41,3 @@ class MtmForm(forms.Form):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
-
-
-    height = forms.CharField(max_length=3, required=False)
-    neck = forms.CharField(max_length=3, required=False)
-    shoulder = forms.CharField(max_length=3, required=False)
-    chest = forms.CharField(max_length=3, required=False)
-    arm = forms.CharField(max_length=3, required=False)
-    back = forms.CharField(max_length=3, required=False)
-    waist = forms.CharField(max_length=3, required=False)
-    hips = forms.CharField(max_length=3, required=False)
-    leg = forms.CharField(max_length=3, required=False)
-    name = forms.CharField(max_length=254)
-    email = forms.EmailField(max_length=254)
-    phone = forms.CharField(max_length=20)
