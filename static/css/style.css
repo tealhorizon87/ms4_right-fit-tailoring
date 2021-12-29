@@ -87,6 +87,18 @@ Code sourced from freeCodeCamp; see README Acknowledgments */
 }
 /* END ATTRIBUTION */
 
+.message-container {
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  z-index: 99999999;
+  background-color: var(--my-white);
+}
+
+.custom-toast {
+  overflow: visible;
+}
+
 /* -------------------------------------Background image */
 body {
   background: url("/media/hero-lg.jpg") no-repeat fixed;

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from products.models import Product, Category
-from django.core.mail import send_mail
+from django.contrib import messages
 from .forms import MtmForm
 from .models import MtmOrder
 
@@ -42,6 +42,7 @@ def mtm_form(request, product_id):
 
         form = MtmForm(form_data)
         form.save()
+        messages.success(request, f"Your order has been submitted. One of our team will contact you shortly")
 
         return redirect(reverse("products"))
     else:
