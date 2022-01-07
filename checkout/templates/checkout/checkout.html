@@ -49,6 +49,18 @@
                   {{ form.country | as_crispy_field }}
                 </div>
 
+                <div class="form-check form-check-inline mr-0">
+    							{% if user.is_authenticated %}
+    								<label class="form-check-label" for="id-save-info">Save details to my profile</label>
+                    <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+    							{% else %}
+    								<label class="form-check-label" for="id-save-info">
+                      <a class="nav-link" href="">Create an account</a> or
+                      <a class="nav-link" href="">login</a> to save this information
+                    </label>
+    							{% endif %}
+    						</div>
+
                 <fieldset class="mb-5">
                   <legend class="fieldset-label px-2 w-auto">Payment</legend>
                   <!-- A Stripe card element will go here -->
@@ -130,6 +142,13 @@
         </div>
       </div>
     </div>
+  </div>
+  <div id="loading-overlay">
+    <h1 class="loading-spinner">
+      <span class="icon">
+        <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+      </span>
+    </h1>
   </div>
 {% endblock %}
 
