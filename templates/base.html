@@ -55,12 +55,23 @@
             <div class="col-3 col-sm-4 col-md-4 mt-3">
               <ul class="list-inline text-left text-sm-center my-0">
                 <li class="list-inline-item d-none d-sm-inline-block mr-sm-3">
-                  <a href="{% url 'account_login' %}" class="nav-link p-0 white-font">
+                  <a class="nav-link p-0 white-font" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
-                      <div><i class="fas fa-user"></i></div>
-                      <p class="my-0">Log in/Register</p>
+                        <div><i class="fas fa-user"></i></div>
+                        <p class="my-0">My Account</p>
                     </div>
                   </a>
+                  {% if request.user.is_authenticated %}
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                      <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                      <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    </div>
+                  {% else %}
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                      <a href="{% url 'account_login' %}" class="dropdown-item">Log in</a>
+                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    </div>
+                  {% endif %}
                 </li>
                 <li class="list-inline-item ml-sm-3">
                   <a href="{% url 'cart' %}" class="nav-link p-0 white-font">
