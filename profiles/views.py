@@ -3,13 +3,27 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order
 from .models import UserProfile
+from .forms import UserProfileForm
 
 
 def profile(request):
     """ Display the user's profile """
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    if request.method == "POST":
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Profile Updated Successfully")
+        else:
+            messages.error(request, "Update failed. Please ensure the form is valid.")
+    else:
+        form = UserProfileForm(instance=profile)
+
+    orders = profile.orders.all()
+
     context = {
-        "profile": profile,
+        "form": form,
+        "orders": orders,
     }
     return render(request, "profiles/profile.html", context)

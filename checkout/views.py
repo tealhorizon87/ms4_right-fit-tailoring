@@ -5,6 +5,8 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
+from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
 from cart.contexts import cart_contents
 import stripe
 import json
@@ -100,14 +102,31 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.default_email,
+                    'phone_number': profile.default_phone_number,
+                    'address_line_1': profile.default_address_line_1,
+                    'address_line_2': profile.default_address_line_2,
+                    'city': profile.default_city,
+                    'county': profile.default_county,
+                    'postcode': profile.default_postcode,
+                    'country': profile.default_country,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
         if not stripe_public_key:
             messages.warning(request, 'Stripe public key is missing. \
                 Did you forget to set it in your environment?')
 
         context = {
-            "form": form,
+            "form": order_form,
             "stripe_public_key": stripe_public_key,
             'client_secret': intent.client_secret,
         }

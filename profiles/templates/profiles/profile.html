@@ -8,5 +8,47 @@
     </div>
   </div>
   <div class="overlay"></div>
-  <h2>Profile</h2>
+
+  <div class="row">
+    <div class="col-12 col-md-10 offset-md-1">
+      <h2 class="text-center mb-3">My Profile</h2>
+      <div class="row">
+        <div class="col-12 col-md-6 mtm-display order-1 order-md-0">
+          <div class="col-10 offset-1">
+            <form class="mtm-form" method="POST" action="{% url 'profile' %}" id="profile-update-form">
+              {% csrf_token %}
+
+              <div class="form-group mb-5">
+                <h4 class="text-center mb-3">My Contact Details</h4>
+                {{ form.default_email | as_crispy_field }}
+                {{ form.default_phone_number | as_crispy_field }}
+              </div>
+
+              <div class="form-group mb-5">
+                <h4 class="text-center mb-3">My Delivery Address</h4>
+                {{ form.default_address_line_1 | as_crispy_field }}
+                {{ form.default_address_line_2 | as_crispy_field }}
+                {{ form.default_city | as_crispy_field }}
+                {{ form.default_county | as_crispy_field }}
+                {{ form.default_postcode | as_crispy_field }}
+                {{ form.default_country | as_crispy_field }}
+              </div>
+              <div class="text-center">
+                <button type="submit" class="my-button">Update Details</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 mtm-display left-border order-0 order-md-1">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center mb-3">My Orders</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
