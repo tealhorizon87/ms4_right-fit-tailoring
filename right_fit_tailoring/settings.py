@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "tealhorizon87-rf-tailoring.herokuapp.com"]
 
 
 # Application definition
@@ -116,11 +116,20 @@ WSGI_APPLICATION = 'right_fit_tailoring.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if "DATABASE_URL" in os.environ:
+    DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+DATABASES = {
+    "default": dj_database_url.parse("postgres://symfswhulcmjrz:c04c7ed64a60983133a63463b4afa4940cc2dbcd5e2dafe16df8f3791ecb4f98@ec2-18-203-64-130.eu-west-1.compute.amazonaws.com:5432/d53pdqkf6cr894")
 }
 
 
