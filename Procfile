@@ -1,1 +1,1 @@
-web: gunicorn right_fit_tailoring:application
+web: gunicorn right_fit_tailoring.wsgi:application
