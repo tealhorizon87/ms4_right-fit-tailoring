@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'right_fit_tailoring.settings.dev')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'right_fit_tailoring.settings')
 
 application = get_wsgi_application()
