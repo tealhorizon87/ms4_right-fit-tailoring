@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ["tealhorizon87-rf-tailoring.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["tealhorizon-rf-tailoring.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -127,11 +127,6 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
-DATABASES = {
-    "default": dj_database_url.parse("postgres://symfswhulcmjrz:c04c7ed64a60983133a63463b4afa4940cc2dbcd5e2dafe16df8f3791ecb4f98@ec2-18-203-64-130.eu-west-1.compute.amazonaws.com:5432/d53pdqkf6cr894")
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
