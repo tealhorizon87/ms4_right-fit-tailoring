@@ -22,7 +22,7 @@ class Order(models.Model):
     country = CountryField(blank_label="Country *", null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    original_bag = models.TextField(null=False, blank=False, default="")
+    original_cart = models.TextField(null=False, blank=False, default="")
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default="")
 
 
