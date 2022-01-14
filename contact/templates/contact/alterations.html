@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="container header-spacer">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center">
+        <h2>Alterations</h2>
+        <p>
+          We offer an alteration service and would be glad to help bring new life to old clothes. <br>
+          Fill out this contact form with the details of the alteration and our seamstresses will be in touch to arrange the rest.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+        <form action="{% url 'alterations' %}" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <select class="form-control" name="alteration">
+              <option disabled selected>Please select...</option>
+              <option>Shorten (leg/sleeve/jacket)</option>
+              <option>Lengthen (leg/sleeve)</option>
+              <option>Adjust waist/seams</option>
+              <option>Repair or replace fastenings</option>
+              <option>Attach decorative fabric</option>
+              <option>Embroidery</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="query" class="form-control" rows="8" cols="80" maxlength="1000" placeholder="Any other information..."></textarea>
+          </div>
+          <div class="text-center mb-5">
+            <button type="submit" name="contact-submit" class="my-button">Request Quote</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

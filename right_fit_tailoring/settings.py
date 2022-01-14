@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'made_to_measure',
     'checkout',
     'profiles',
+    'contact',
 
     #Other
     'crispy_forms',

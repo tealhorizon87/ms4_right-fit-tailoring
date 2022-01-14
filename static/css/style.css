@@ -99,6 +99,11 @@ Code sourced from freeCodeCamp; see README Acknowledgments */
   overflow: visible;
 }
 
+a:hover {
+  text-decoration: none;
+  color: var(--my-white);
+}
+
 /* -------------------------------------Background image */
 body {
   background: url("/media/hero-lg.jpg") no-repeat fixed;
