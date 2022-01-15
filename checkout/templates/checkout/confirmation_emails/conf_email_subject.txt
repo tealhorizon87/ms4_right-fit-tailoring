@@ -1,0 +1,1 @@
+Right Fit Tailoring order confirmation - order number: {{ order.order_number }}

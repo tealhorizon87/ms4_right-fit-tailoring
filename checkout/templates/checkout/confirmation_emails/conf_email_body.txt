@@ -1,0 +1,24 @@
+Hello {{ order.full_name }}!
+
+Thank you for your order from Right Fit Tailoring. Below is a summary of your order.
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Grand Total: ${{ order.grand_total }}
+
+Your delivery address:
+{{ order.address_line_1 }}
+{{ order.address_line_2 }}
+{{ order.city }}
+{{ order.county }}
+{{ order.postcode }}
+{{ order.country }}
+
+If these details are incorrect or you have any questions, please contact us at {{contact_email}}.
+
+Thank you for your order!
+
+Sincerely,
+
+Right Fit Tailoring
