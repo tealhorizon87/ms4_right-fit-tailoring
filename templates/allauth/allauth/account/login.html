@@ -1,0 +1,20 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block inner_content %}
+  <h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
+  <hr>
+
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    {{ form|crispy }}
+    {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button class="primaryAction my-button" type="submit">{% trans "Sign In" %}</button>
+    <p class="mt-2">
+      <a class="secondaryAction dark-font" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    </p>
+  </form>
+{% endblock %}
