@@ -27,7 +27,7 @@
           </div>
           <hr>
           {% for item in cart_items %}
-            <div class="row mb-2">
+            <div class="row mb-sm-2">
               <div class="col-12 col-sm-4 col-md-2 text-md-center">
                 <img src="{{ item.product.image.url }}" height="150px" width="100px" alt="{{ item.product.name }}">
               </div>
@@ -43,7 +43,7 @@
                 <span>£{{ item.product.price }}</span>
               </div>
               <div class="col-12 col-md-2">
-                <form action="{% url 'update_cart' item.item_id %}" method="POST" class="h-100">
+                <form action="{% url 'update_cart' item.item_id %}" method="POST" class="float-right quantity-form">
                   {% csrf_token %}
                   <div class="input-group">
                     <span class="d-md-none pr-2 input-group-prepend">Quantity:</span>
@@ -52,14 +52,14 @@
                       data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                   </div>
                   <button type="submit" class="border-0 bg-transparent px-0"><small>Update</small></button>
-                  <a href="{% url 'remove_from_cart' item.item_id %}" class="float-right dark-font" id="remove_{{ item.item_id }}"
+                  <a href="{% url 'remove_from_cart' item.item_id %}" class="float-right text-danger" id="remove_{{ item.item_id }}"
                     data-product_size="{{ item.size }}"><small>Remove</small></a>
                   {% if item.product.sizeable %}
                     <input type="hidden" name="product_size" value="{{ item.size }}">
                   {% endif %}
                 </form>
               </div>
-              <div class="col-12 col-md-2 cart-display">
+              <div class="col-12 col-md-2 cart-display ">
                 <span class="d-md-none pr-2">Subtotal:</span>
                 <span><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></span>
               </div>
@@ -67,12 +67,12 @@
             <hr>
           {% endfor %}
           <div class="row mb-4">
-            <div class="col-4 offset-7 text-right">
+            <div class="col text-right">
               <p>Cart Total ({{ item_count }} items): <strong>£{{ total }}</strong></p>
-              <a href="{% url 'products' %}" class="btn my-button-reverse">
+              <a href="{% url 'products' %}" class="btn my-button-reverse mb-3">
                 Keep shopping
               </a>
-              <a href="{% url 'checkout' %}" class="btn my-button">
+              <a href="{% url 'checkout' %}" class="btn my-button mb-3">
                 Checkout
               </a>
             </div>

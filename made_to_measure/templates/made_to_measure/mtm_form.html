@@ -76,14 +76,14 @@
                     <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
     							{% else %}
     								<label class="form-check-label" for="id-save-info">
-                      <a class="nav-link" href="{% url 'account_signup' %}">Create an account</a> or
-                      <a class="nav-link" href="{% url 'account_login' %}">login</a> to save this information
+                      <a class="nav-link d-inline px-0" href="{% url 'account_signup' %}">Create an account</a> or
+                      <a class="nav-link d-inline px-0" href="{% url 'account_login' %}">login</a> to save this information
                     </label>
     							{% endif %}
     						</div>
 
                 <div class="text-center">
-                  <button type="submit" class="my-button">Submit</button>
+                  <button type="submit" class="btn my-button my-3">Submit</button>
                 </div>
               </form>
             </div>

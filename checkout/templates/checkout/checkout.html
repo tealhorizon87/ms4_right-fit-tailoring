@@ -72,72 +72,52 @@
                 </fieldset>
 
                 <div class="text-center">
-                  <a href="{% url 'cart' %}" class="btn my-button-reverse">
+                  <button type="submit" class=" btn my-button mb-3" id="submit-button">Complete Order</button>
+                  <a href="{% url 'cart' %}" class="btn my-button-reverse mb-3">
                     <span>
                       <i class="fas fa-chevron-left"></i>
                     </span>
                     <span>Back to Cart</span>
                   </a>
-                  <button type="submit" class="my-button" id="submit-button">Complete Order</button>
                 </div>
               </form>
             </div>
           </div>
 
           <div class="col-12 col-md-6 mtm-display left-border order-0 order-md-1">
-            <h3 class="mb-3">Cart</h3>
-            <div class="row">
-              <div class="col-6"><h3>Product</h3></div>
-              <div class="d-none d-md-block col-2"><h3>Price</h3></div>
-              <div class="d-none d-md-block col-2"><h3>Quantity</h3></div>
-              <div class="d-none d-md-block col-2"><h3>Subtotal</h3></div>
-            </div>
-            <hr>
-            {% for item in cart_items %}
-              <div class="row mb-2">
-                <div class="col-12 col-sm-4 col-md-2 text-md-center">
-                  <img src="{{ item.product.image.url }}" height="150px" width="100px" alt="{{ item.product.name }}">
-                </div>
-                <div class="col-12 col-sm-8 col-md-4">
-                  <p>{{ item.product.name }}</p>
-                  <p class="text-muted"><i class="fas fa-list mr-1"></i>{{ item.product.category.friendly_name }}</p>
-                  {% if item.product.sizeable %}
-                    <p>Size: {{ item.size|upper }}</p>
-                  {% endif %}
-                </div>
-                <div class="col-12 col-md-2 cart-display">
-                  <span class="d-md-none pr-2">Price:</span>
-                  <span>£{{ item.product.price }}</span>
-                </div>
-                <div class="col-12 col-md-2">
-                  <form action="{% url 'update_cart' item.item_id %}" method="POST" class="h-100">
-                    {% csrf_token %}
-                    <div class="input-group">
-                      <span class="d-md-none pr-2 input-group-prepend">Quantity:</span>
-                      <input class="form-control" type="number" name="quantity"
-                        value="{{ item.quantity }}" min="1" max="10"
-                        data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                    </div>
-                    <button type="submit" class="border-0 bg-transparent px-0"><small>Update</small></button>
-                    <a href="{% url 'remove_from_cart' item.item_id %}" class="float-right dark-font" id="remove_{{ item.item_id }}"
-                      data-product_size="{{ item.size }}"><small>Remove</small></a>
-                    {% if item.product.sizeable %}
-                      <input type="hidden" name="product_size" value="{{ item.size }}">
-                    {% endif %}
-                  </form>
-                </div>
-                <div class="col-12 col-md-2 cart-display">
-                  <span class="d-md-none pr-2">Subtotal:</span>
-                  <span><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></span>
-                </div>
+            <div class="col-10 offset-1">
+              <div class="row">
+                <div class="col"><h3>Product{% if item_count > 1 %}s{% endif %}</h3></div>
               </div>
               <hr>
-            {% endfor %}
-            <div class="row mb-4">
-              <div class="col-4 offset-7 text-right">
-                <p>Cart Total ({{ item_count }} items): <strong>£{{ total }}</strong></p>
+              {% for item in cart_items %}
+                <div class="row mb-2">
+                  <div class="col-12 col-sm-6">
+                    {% if item.product.image %}
+                      <img src="{{ item.product.image.url }}" class=" checkout-img w-100" alt="{{ item.product.name }}">
+                    {% else %}
+                      <img src="{{ MEDIA_URL }}noimage.png" class="checkout-img w-100" alt="{{ item.product.name }}">
+                    {% endif %}
+                  </div>
+                  <div class="col-12 col-sm-6 checkout-display">
+                    <div>
+                      <p class="small m-0">{{ item.product.name }}</p>
+                      {% if item.product.sizeable %}
+                        <p class="small m-0">Size: <strong>{{ item.size|upper }}</strong></p>
+                      {% endif %}
+                      <p class="m-0">Price: £{{ item.product.price }}</p>
+                      <p class="m-0">Quantity: {{ item.quantity }}</p>
+                      <p><strong>£{{ item.product.price | calc_subtotal:item.quantity }}</strong></p>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              {% endfor %}
+              <div class="row mb-4">
+                <div class="col-11 offset-1 text-right">
+                  <p>Cart Total ({{ item_count }} items): <strong>£{{ total }}</strong></p>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </div>

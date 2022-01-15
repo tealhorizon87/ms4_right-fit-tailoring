@@ -187,9 +187,18 @@ footer .row {
 
 /* ------------------------------------------Cart styles */
 .quantity-form {
+  width: 100%;
+}
+
+.checkout-img {
+  max-width: 220px;
+}
+
+.checkout-display {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
 }
 
 /* ------------------------------------------mtm styles */
@@ -237,6 +246,10 @@ smaller screens */
 
   .mtm-display {
     text-align: center !important;
+  }
+
+  .quantity-form {
+    width: auto;
   }
 }
 
