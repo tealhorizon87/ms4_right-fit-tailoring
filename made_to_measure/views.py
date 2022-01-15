@@ -27,7 +27,6 @@ def mtm_form(request, product_id):
     """ A view to display and process the made to measure form """
 
     product = Product.objects.get(id=product_id)
-    mtm_price = product.price * 3
 
     if request.method == "POST":
 
@@ -53,10 +52,13 @@ def mtm_form(request, product_id):
 
         if garment in tops:
             required_measurements = "tops"
+            mtm_price = (product.price * 3) + 20
         elif garment in bottoms:
             required_measurements = "bottoms"
+            mtm_price = (product.price * 4) + 30
         else:
             required_measurements = "both"
+            mtm_price = (product.price * 5) + 60
 
     context = {
         "product": product,
