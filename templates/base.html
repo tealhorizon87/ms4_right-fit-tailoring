@@ -92,8 +92,8 @@
           </div>
           <div class="row">
             <nav class="navbar navbar-expand-md w-100 mx-auto p-0">
-              <button class="navbar-toggler mx-auto menu-button border-0" type="button" data-toggle="collapse" data-target="#menu-bar" aria-controls="menu-bar" aria-expanded="false" aria-label="Toggle navigation">
-                <p class="white-font mb-0">Menu <i class="fas fa-chevron-down"></i></p>
+              <button class="navbar-toggler mx-auto menu-button border-0 white-font" type="button" data-toggle="collapse" data-target="#menu-bar" aria-controls="menu-bar" aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-chevron-down"></i>
               </button>
               {% include 'includes/menu-bar.html' %}
             </nav>
@@ -164,7 +164,7 @@
     </div>
 
     {% block postload_js %}
-      <script type="text/javascript">
+      <script>
         $('.toast').toast('show');
       </script>
     {% endblock %}
