@@ -108,6 +108,7 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.create(
                     full_name=shipping_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     address_line_1=shipping_details.address.line1,
@@ -141,7 +142,7 @@ class StripeWH_Handler:
                 if order:
                     order.delete()
                 return HttpResponse(
-                    content=f"Webhook received: {event['type']} | ERROR: {e}",
+                    content=f"Order Webhook received: {event['type']} | ERROR: {e}",
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
