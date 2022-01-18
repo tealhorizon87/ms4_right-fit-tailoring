@@ -9,75 +9,77 @@
   </div>
   <div class="overlay"></div>
 
-  <div class="row">
-    <div class="col-12 col-md-10 offset-md-1">
-      <h2 class="text-center mb-3">My Profile</h2>
-      <div class="row">
-        <div class="col-12 col-md-6 mtm-display">
-          <div class="col-10 offset-1">
-            <form class="mtm-form" method="POST" action="{% url 'profile' %}" id="profile-update-form">
-              {% csrf_token %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1">
+        <h2 class="text-center mb-3">My Profile</h2>
+        <div class="row">
+          <div class="col-12 col-md-6 mtm-display">
+            <div class="col-10 offset-1">
+              <form class="mtm-form" method="POST" action="{% url 'profile' %}" id="profile-update-form">
+                {% csrf_token %}
 
-              <div class="form-group mb-5">
-                <h4 class="text-center mb-3">My Contact Details</h4>
-                {{ form.default_email | as_crispy_field }}
-                {{ form.default_phone_number | as_crispy_field }}
-              </div>
+                <div class="form-group mb-5">
+                  <h4 class="text-center mb-3">My Contact Details</h4>
+                  {{ form.default_email | as_crispy_field }}
+                  {{ form.default_phone_number | as_crispy_field }}
+                </div>
 
-              <div class="form-group mb-5">
-                <h4 class="text-center mb-3">My Delivery Address</h4>
-                {{ form.default_address_line_1 | as_crispy_field }}
-                {{ form.default_address_line_2 | as_crispy_field }}
-                {{ form.default_city | as_crispy_field }}
-                {{ form.default_county | as_crispy_field }}
-                {{ form.default_postcode | as_crispy_field }}
-                {{ form.default_country | as_crispy_field }}
-              </div>
-              <div class="text-center">
-                <button type="submit" class="my-button">Update Details</button>
-              </div>
-            </form>
+                <div class="form-group mb-5">
+                  <h4 class="text-center mb-3">My Delivery Address</h4>
+                  {{ form.default_address_line_1 | as_crispy_field }}
+                  {{ form.default_address_line_2 | as_crispy_field }}
+                  {{ form.default_city | as_crispy_field }}
+                  {{ form.default_county | as_crispy_field }}
+                  {{ form.default_postcode | as_crispy_field }}
+                  {{ form.default_country | as_crispy_field }}
+                </div>
+                <div class="text-center mb-5">
+                  <button type="submit" class="my-button">Update Details</button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
 
-        <div class="col-12 col-md-6 mtm-display left-border">
-          <h4 class="text-center mb-3">Order History</h4>
-          <div class="order-history table-responsive">
-            <table class="table table-sm table-borderless">
-              <thead>
-                <tr>
-                  <th>Order Number</th>
-                  <th>Date</th>
-                  <th>Items</th>
-                  <th>Order Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for order in orders %}
+          <div class="col-12 col-md-6 mtm-display left-border">
+            <h4 class="text-center mb-3">Order History</h4>
+            <div class="order-history table-responsive">
+              <table class="table table-sm table-borderless">
+                <thead>
                   <tr>
-                    <td>
-                      <a class="dark_font" href="{% url 'order_history' order.order_number %}"
-                        title="{{ order.order_number }}">
-                        {{ order.order_number|truncatechars:6 }}
-                      </a>
-                    </td>
-                    <td>{{ order.date }}</td>
-                    <td>
-                      <ul class="list-unstyled">
-                        {% for item in order.lineitems.all %}
-                          <li class="small">
-                            {% if item.product.sizeable %}
-                              Size {{ item.product.size|upper }}
-                            {% endif %}{{ item.product.name }} x{{ item.quantity }}
-                          </li>
-                        {% endfor %}
-                      </ul>
-                    </td>
-                    <td>${{ order.grand_total }}</td>
+                    <th>Order Number</th>
+                    <th>Date</th>
+                    <th>Items</th>
+                    <th>Order Total</th>
                   </tr>
-                {% endfor %}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {% for order in orders %}
+                    <tr>
+                      <td>
+                        <a class="dark_font" href="{% url 'order_history' order.order_number %}"
+                          title="{{ order.order_number }}">
+                          {{ order.order_number|truncatechars:6 }}
+                        </a>
+                      </td>
+                      <td>{{ order.date }}</td>
+                      <td>
+                        <ul class="list-unstyled">
+                          {% for item in order.lineitems.all %}
+                            <li class="small">
+                              {% if item.product.sizeable %}
+                                Size {{ item.product.size|upper }}
+                              {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </td>
+                      <td>${{ order.grand_total }}</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
