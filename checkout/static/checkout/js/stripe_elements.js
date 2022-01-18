@@ -75,7 +75,7 @@ form.addEventListener('submit', function(ev) {
               line1: $.trim(form.address_line_1.vlaue),
               line2: $.trim(form.address_line_2.vlaue),
               city: $.trim(form.city.vlaue),
-              county: $.trim(form.county.vlaue),
+              state: $.trim(form.county.vlaue),
               country: $.trim(form.country.vlaue),
             }
       },
@@ -86,10 +86,11 @@ form.addEventListener('submit', function(ev) {
           line1: $.trim(form.address_line_1.vlaue),
           line2: $.trim(form.address_line_2.vlaue),
           city: $.trim(form.city.vlaue),
-          county: $.trim(form.county.vlaue),
+          state: $.trim(form.county.vlaue),
           postcode: $.trim(form.postcode.value),
           country: $.trim(form.country.vlaue),
         }
+      }
       }
     }).then(function(result) {
       if (result.error) {
@@ -111,5 +112,5 @@ form.addEventListener('submit', function(ev) {
     });
   }).fail(function() {
     location.reload();
-  })
+  });
 });
