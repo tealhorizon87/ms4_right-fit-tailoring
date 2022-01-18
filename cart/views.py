@@ -26,16 +26,22 @@ def add_to_cart(request, item_id):
                 cart[item_id]["items_by_size"][size] += quantity
                 messages.success(
                     request,
-                    f"Updated quantity of {product.name} with size {size.upper()}")
+                    f"""
+                    Updated quantity of {product.name} with size {size.upper()}
+                    """)
             else:
                 cart[item_id]["items_by_size"][size] = quantity
                 messages.success(
                     request,
-                    f"Added size {size.upper()} of {product.name} to your cart")
+                    f"""
+                    Added size {size.upper()} of {product.name} to your cart
+                    """)
         else:
             cart[item_id] = {"items_by_size": {size: quantity}}
             messages.success(
-                request, f"Added size {size.upper()} of {product.name} to your cart")
+                request, f"""
+                    Added size {size.upper()} of
+                    {product.name} to your cart""")
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
@@ -60,10 +66,14 @@ def update_cart(request, item_id):
     if size:
         if quantity > 0:
             cart[item_id]["items_by_size"][size] = quantity
-            messages.success(request, f"{product.name} in size {size.upper()} updated")
+            messages.success(request, f"""
+                {product.name} in size {size.upper()} updated
+                """)
         else:
             del cart[item_id]["items_by_size"][size]
-            messages.success(request, f"Removed size {size.upper()} {product.name} from your cart")
+            messages.success(request, f"""
+                Removed size {size.upper()} {product.name} from your cart
+                """)
     else:
         if quantity > 0:
             cart[item_id] = quantity
@@ -87,7 +97,10 @@ def remove_from_cart(request, item_id):
 
     if size:
         del cart[item_id]["items_by_size"][size]
-        messages.success(request, f"Removed size {size.upper()} {product.name} from your cart")
+        messages.success(request, f"""
+            Removed size {size.upper()}
+            {product.name} from your cart
+            """)
     else:
         cart.pop(item_id)
         messages.success(request, f"Removed {product.name} from your cart")

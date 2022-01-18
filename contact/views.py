@@ -7,7 +7,9 @@ from django.contrib import messages
 def contact(request):
     if request.method == "POST":
         subject = request.POST["subject"]
-        body = f"{request.POST['name']} has sent you a contact query: {request.POST['query']}"
+        body = f"""
+            {request.POST['name']} has sent you a contact query:
+            {request.POST['query']}"""
         return_email = request.POST["email"]
 
         send_mail(
@@ -26,7 +28,8 @@ def contact(request):
 def alterations(request):
     if request.method == "POST":
         subject = f"Alteration Request: {request.POST['alteration']}"
-        body = f"{request.POST['name']} has sent you an alteration request: {request.POST['query']}"
+        body = f"""{request.POST['name']} has sent you an alteration request:
+            {request.POST['query']}"""
         return_email = request.POST["email"]
 
         send_mail(

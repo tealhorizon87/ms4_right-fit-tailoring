@@ -41,7 +41,9 @@ def mtm_form(request, product_id):
 
         form = MtmForm(form_data)
         form.save()
-        messages.success(request, f"Your order has been submitted. One of our team will contact you shortly")
+        messages.success(request, f"""
+            Your order has been submitted.
+            One of our team will contact you shortly""")
 
         return redirect(reverse("products"))
     else:

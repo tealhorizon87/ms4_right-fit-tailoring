@@ -17,17 +17,17 @@ class MtmOrder(models.Model):
     waist = models.CharField(max_length=3, null=True, blank=True)
     hips = models.CharField(max_length=3, null=True, blank=True)
     leg = models.CharField(max_length=3, null=True, blank=True)
-    product = models.ForeignKey(Product, null=True, blank=True, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, null=True, blank=True,
+                                on_delete=models.CASCADE)
     garment = models.CharField(max_length=20, null=False, blank=False)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-
+    order_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
 
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
         """
         return uuid.uuid4().hex.upper()
-
 
     def save(self, *args, **kwargs):
         """
@@ -37,7 +37,6 @@ class MtmOrder(models.Model):
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
-
 
     def __str__(self):
         return self.order_number
