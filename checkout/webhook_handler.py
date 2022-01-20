@@ -72,29 +72,25 @@ class StripeWH_Handler:
                 profile.default_county = shipping_details.address.state,
                 profile.save()
 
-        order_exists = False
-        attempt = 1
-        while attempt <= 5:
-            try:
-                order = Order.objects.get(
-                    full_name__iexact=shipping_details.name,
-                    email__iexact=billing_details.email,
-                    phone_number__iexact=shipping_details.phone,
-                    address_line_1__iexact=shipping_details.address.line1,
-                    address_line_2__iexact=shipping_details.address.line2,
-                    city__iexact=shipping_details.address.city,
-                    county__iexact=shipping_details.address.state,
-                    postcode__iexact=shipping_details.address.postal_code,
-                    country__iexact=shipping_details.address.country,
-                    grand_total=grand_total,
-                    original_cart=cart,
-                    stripe_pid=pid,
-                )
-                order_exists = True
-                break
-            except Order.DoesNotExist:
-                attempt += 1
-                time.sleep(1)
+        try:
+            order = Order.objects.get(
+                full_name__iexact=shipping_details.name,
+                email__iexact=billing_details.email,
+                phone_number__iexact=shipping_details.phone,
+                address_line_1__iexact=shipping_details.address.line1,
+                address_line_2__iexact=shipping_details.address.line2,
+                city__iexact=shipping_details.address.city,
+                county__iexact=shipping_details.address.state,
+                postcode__iexact=shipping_details.address.postal_code,
+                country__iexact=shipping_details.address.country,
+                grand_total=grand_total,
+                original_cart=cart,
+                stripe_pid=pid,
+            )
+            order_exists = True
+        except Order.DoesNotExist:
+            order_exists = False
+
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(

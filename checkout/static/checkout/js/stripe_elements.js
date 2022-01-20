@@ -52,7 +52,8 @@ form.addEventListener('submit', function(ev) {
   ev.preventDefault();
   card.update({ 'disabled': true});
   $('#submit-button').attr('disabled', true);
-  $("#loading-overlay").show();
+  $("#payment-form").fadeToggle(100);
+  $("#loading-overlay").fadeToggle(100);
 
   var saveInfo = Boolean($("#id-save-info").attr("checked"));
   var csrfToken = $("input[name='csrfmiddlewaretoken']").val();
@@ -101,9 +102,10 @@ form.addEventListener('submit', function(ev) {
           <span>${result.error.message}</span>
         `;
         $(errorDiv).html(html);
+        $("#payment-form").fadeToggle(100);
+        $("#loading-overlay").fadeToggle(100);
         card.update({ 'disabled': false});
         $('#submit-button').attr('disabled', false);
-        $("#loading-overlay").hide();
       } else {
         if (result.paymentIntent.status === 'succeeded') {
           form.submit();
