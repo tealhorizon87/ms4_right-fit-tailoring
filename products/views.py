@@ -36,6 +36,11 @@ def all_products(request):
                 description__icontains=query)
             products = products.filter(queries)
 
+            if not products:
+                messages.error(request, """
+                    Sorry, there are no products matching your search""")
+                return redirect(reverse("products"))
+
         if "category" in request.GET:
             categories = request.GET["category"].split(",")
             products = products.filter(

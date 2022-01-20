@@ -29,7 +29,8 @@ def mtm_form(request, product_id):
     product = Product.objects.get(id=product_id)
 
     if request.method == "POST":
-
+        
+        mtm_price = request.POST.get("mtm_price")
         form_data = {
             "order_total": mtm_price,
         }
