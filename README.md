@@ -79,7 +79,7 @@ This application is an e-commerce store utilising the [Django](https://www.djang
   - The checkout app contains the forms and models required to create an order, both to be displayed to the user and to the administrator, all the stripe functionality to process payment and systems to protect that function.
 
 #### Wish list
-  - The wish list app allows users to set up multiple wish lists, add and remove items to said wish lists, and display them back to the user.
+  - The wish list app allows users to set up ae wish list, add and remove items to said wish list, and display them back to the user.
 
 <br>
 
@@ -120,6 +120,8 @@ Below is the link to a tabulated view of how the data is stored in the database.
 ### Future Features
 - Similar to how the delivery details can be saved to the user's profile, a system to save measurement details for further use
 - Sizing and measurement charts that the user can access to better determine what size they might need, and how to do their body measurements
+- Log in functionality to include social media accounts
+- Payment system to include PayPal and Apple Pay
 
 ## Technologies Used
 ### Languages:
