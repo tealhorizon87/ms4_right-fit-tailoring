@@ -1,8 +1,8 @@
 # Right Fit Tailoring
 
-Right Fit Tailoring is a full service bespoke tailoring company that offers ready made men's fashion items and accessories as well as made to measure and alteration services. This application is their online store that customers can use to buy items, order made to measure and purchase alteration services. The deployed site can be viewed [here](#)
+Right Fit Tailoring is a full service bespoke tailoring company that offers ready made men's fashion items and accessories as well as made to measure and alteration services. This application is their online store that customers can use to buy items, order made to measure and purchase alteration services. The deployed site can be viewed [here](https://tealhorizon-rf-tailoring.herokuapp.com/)
 
-![mockup](#)
+![mockup](docs/images/home-page-small.png)
 
 ## Table of Contents
 1. [UX](#ux)
@@ -94,6 +94,7 @@ Below are the wireframes used to design the layout. They were created using [Bal
   - [Log in/Register](docs/wireframes/2_login_register.png)
   - [Profile](docs/wireframes/3_profile.png)
   - [All Products](docs/wireframes/4_all_products.png)
+  - [Product Detail](docs/wireframes/12_product_detail.png)
   - [Shopping Cart](docs/wireframes/5_shopping_cart.png)
   - [Checkout](docs/wireframes/6_checkout.png)
   - [Made To Measure](docs/wireframes/7_made_to_measure.png)
@@ -122,6 +123,7 @@ Below is the link to a tabulated view of how the data is stored in the database.
 - Sizing and measurement charts that the user can access to better determine what size they might need, and how to do their body measurements
 - Log in functionality to include social media accounts
 - Payment system to include PayPal and Apple Pay
+- Add a product management section so that admin users can add and edit products from the live site rather than the django admin page
 
 ## Technologies Used
 ### Languages:

@@ -50,6 +50,8 @@ Due to time constraints on this project, unit testing was not possible. However,
 
 The full table can be found [here](docs/docs/test-matrix.pdf).
 
+The user authentication section has not been tested in this project as it has come directly from Django allauth and will have been thoroughly tested before release.
+
 Back to [Table of Contents](#table-of-contents)
 
 ## User Story Evaluation
