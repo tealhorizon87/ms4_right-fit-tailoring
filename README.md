@@ -118,7 +118,6 @@ Below is the link to a tabulated view of how the data is stored in the database.
 - A wish list ability to allow users to create lists of future purchases
 
 ### Future Features
-- A wish-list section for registered users to allow them to save items for future purchase
 - Similar to how the delivery details can be saved to the user's profile, a system to save measurement details for further use
 - Sizing and measurement charts that the user can access to better determine what size they might need, and how to do their body measurements
 
@@ -163,7 +162,7 @@ Back to [Table of Contents](#table-of-contents)
 
 ## Testing
 
-I have gathered all my testing data, and stored it in a separate file, which can be found [here](#)
+I have gathered all my testing data, and stored it in a separate file, which can be found [here](TESTING.md)
 
 ### Known Bugs
 
@@ -191,8 +190,9 @@ Back to [Table of Contents](#table-of-contents)
 ## Credits
 
 ### Content
-  - All code was written by myself or taken from the [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/), [Django](https://www.djangoproject.com/) or [Stripe](https://stripe.com/gb) documentation, with considerable inspiration taken from the Code Institute walkthrough projects
-  - In particular, the method for adding sizes to clothing items and setting up confirmation emails.
+  - All code was written by myself or taken from the [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/), [Django](https://www.djangoproject.com/) or [Stripe](https://stripe.com/gb) documentation, with inspiration taken from the Code Institute walkthrough projects
+  - In particular, the method for adding sizes to clothing items and setting up confirmation emails
+  - The wishlist app was inspired by [VinylRack](https://github.com/peejaywk/VinylRack) and adapted for this project
   - The 'no-image' image was taken from [Free Icons PNG](https://www.freeiconspng.com/)
   - All the products with their images and descriptions were taken from [Suit Direct](https://www.suitdirect.co.uk/)
   - The main background image was sourced from [Pixabay](https://pixabay.com/)

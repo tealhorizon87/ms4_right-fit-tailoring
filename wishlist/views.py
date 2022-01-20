@@ -35,7 +35,8 @@ def add_to_wishlist(request, item_id):
     redirect_url = request.META.get('HTTP_REFERER')
 
     # Add to wishlist if not already there
-    in_wishlist = WishlistItem.objects.filter(wishlist=wishlist, product=product).exists()
+    in_wishlist = WishlistItem.objects.filter(wishlist=wishlist,
+                                              product=product).exists()
     if in_wishlist:
         messages.info(request, "This item is already in your wishlist")
     else:
