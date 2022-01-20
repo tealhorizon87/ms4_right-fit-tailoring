@@ -13,8 +13,11 @@ def wishlist(request):
     wishlist = Wishlist.objects.get_or_create(user=request.user)
     wishlist = wishlist[0]
 
+    wishlist_items = list(wishlist.items.all())
+    print(wishlist_items)
     context = {
         "wishlist": wishlist,
+        "wishlist_items": wishlist_items
     }
 
     return render(request, "wishlist/wishlist.html", context)
@@ -31,7 +34,6 @@ def add_to_wishlist(request, item_id):
     product = get_object_or_404(Product, pk=item_id)
     redirect_url = request.META.get('HTTP_REFERER')
 
-
     # Add to wishlist if not already there
     in_wishlist = WishlistItem.objects.filter(wishlist=wishlist, product=product).exists()
     if in_wishlist:
@@ -41,3 +43,15 @@ def add_to_wishlist(request, item_id):
         messages.success(request, "Added product to your wishlist")
 
     return redirect(redirect_url)
+
+
+@login_required
+def remove_from_wishlist(request, item_id):
+    wishlist = Wishlist.objects.get(user=request.user)
+    product = get_object_or_404(Product, pk=item_id)
+
+    wishlist.items.remove(product)
+
+    messages.success(request, "Item succeffully removed from wishlist")
+
+    return redirect(reverse("wishlist"))

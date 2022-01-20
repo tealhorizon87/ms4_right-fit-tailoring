@@ -19,45 +19,55 @@
             <hr>
           </div>
         </div>
-
-        {% for product in wishlist.items.all %}
-          <div class="row mb-sm-2">
-            <div class="col-12 col-sm-4 col-md-2 text-md-center">
-              <img src="{{ product.image.url }}" height="150px" width="100px" alt="{{ product.name }}">
+        {% if wishlist_items %}
+          {% for product in wishlist.items.all %}
+            <div class="row mb-sm-2">
+              <div class="col-12 col-sm-4 col-md-2 text-md-center">
+                <img src="{{ product.image.url }}" height="150px" width="100px" alt="{{ product.name }}">
+              </div>
+              <div class="col-12 col-sm-8 col-md-4">
+                <p>{{ product.name }}</p>
+                <p class="text-muted"><i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}</p>
+              </div>
+              <div class="col-12 col-md-2 cart-display">
+                <span class="d-md-none pr-2">Price:</span>
+                <span>£{{ product.price }}</span>
+              </div>
+              <div class="col-12 col-md-4">
+                <form action="{% url 'add_to_cart' product.id %}" method="POST" class="quantity-form">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="id_qty_{{ product.id }}">Quantity</label>
+                    <input type="number" class="form-control mb-3" name="quantity" value="1" min="1" max="10"
+                      data-item-id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                    {% if product.sizeable %}
+                      <label for="id_product_size">Size</label>
+                      <select class="form-control" name="product_size" id='id_product_size'>
+                        <option value="s">S</option>
+                        <option value="m" selected>M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                      </select>
+                    {% endif %}
+                  </div>
+                  <button type="submit" class="btn my-button mb-3 float-right" name="wishlist_add">
+                    <i class="fas fa-cart-plus"></i> Add to cart
+                  </button>
+                  <a href="{% url 'wishlist_remove' product.id %}" class="text-danger">Remove</a>
+                  <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </form>
+              </div>
             </div>
-            <div class="col-12 col-sm-8 col-md-4">
-              <p>{{ product.name }}</p>
-              <p class="text-muted"><i class="fas fa-list mr-1"></i>{{ product.category.friendly_name }}</p>
-            </div>
-            <div class="col-12 col-md-2 cart-display">
-              <span class="d-md-none pr-2">Price:</span>
-              <span>£{{ product.price }}</span>
-            </div>
-            <div class="col-12 col-md-4">
-              <form action="{% url 'add_to_cart' product.id %}" method="POST" class="quantity-form">
-                {% csrf_token %}
-                <div class="form-group">
-                  <label for="id_qty_{{ product.id }}">Quantity</label>
-                  <input type="number" class="form-control mb-3" name="quantity" value="1" min="1" max="10"
-                    data-item-id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                  {% if product.sizeable %}
-                    <label for="id_product_size">Size</label>
-                    <select class="form-control" name="product_size" id='id_product_size'>
-                      <option value="s">S</option>
-                      <option value="m" selected>M</option>
-                      <option value="l">L</option>
-                      <option value="xl">XL</option>
-                    </select>
-                  {% endif %}
-                </div>
-                <button type="submit" class="btn my-button mb-3 float-right">
-                  <i class="fas fa-cart-plus"></i> Add to cart
-                </button>
-              </form>
-            </div>
+            <hr>
+          {% endfor %}
+        {% else %}
+          <div class="col-12 text-center">
+            <p>You don't have anything in your wishlist at the moment</p>
+            <a href="{% url 'products' %}" class="btn my-button">
+              Keep shopping
+            </a>
           </div>
-          <hr>
-        {% endfor %}
+        {% endif %}
 
       </div>
     </div>

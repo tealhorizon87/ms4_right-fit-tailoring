@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
+from wishlist.models import Wishlist
 
 
 def view_cart(request):
@@ -19,6 +20,10 @@ def add_to_cart(request, item_id):
     if "product_size" in request.POST:
         size = request.POST["product_size"]
     cart = request.session.get("cart", {})
+
+    if "wishlist_add" in request.POST:
+        wishlist = Wishlist.objects.get(user=request.user)
+        wishlist.items.remove(product)
 
     if size:
         if item_id in list(cart.keys()):
