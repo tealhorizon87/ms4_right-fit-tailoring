@@ -7,6 +7,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Online tailoring shop for your whole wardrobe">
     {% endblock %}
 
     {% block corecss %}
@@ -43,9 +44,9 @@
             <div class="col-md-4 my-auto d-none d-md-block">
               <form class="search-bar" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                  <input class="form-control" type="search" placeholder="Search" name="q" aria-label="Search">
+                  <input class="form-control" type="search" placeholder="Search" name="q">
                   <div class="input-group-append">
-                    <button class="btn" type="submit">
+                    <button class="btn" type="submit" aria-label="search">
                       <i class="fas fa-search white-font"></i>
                     </button>
                   </div>
@@ -139,23 +140,27 @@
           <div class="col-12 col-sm-4 my-3 my-sm-auto">
             <ul class="list-inline h5">
               <li class="list-inline-item">
-                <a href="https://www.facebook.com/" class="white-font" target="_blank">
+                <a href="https://www.facebook.com/" rel="noreferrer" class="white-font" target="_blank">
                   <i class="fab fa-facebook-square"></i>
+                  <span class="sr-only">Facebook</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.instagram.com/" class="white-font" target="_blank">
+                <a href="https://www.instagram.com/" rel="noreferrer" class="white-font" target="_blank">
                   <i class="fab fa-instagram-square"></i>
+                  <span class="sr-only">Instagram</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.pinterest.com/" class="white-font" target="_blank">
+                <a href="https://www.pinterest.com/" rel="noreferrer" class="white-font" target="_blank">
                   <i class="fab fa-pinterest-square"></i>
+                  <span class="sr-only">Pinterest</span>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.twitter.com/" class="white-font" target="_blank">
+                <a href="https://www.twitter.com/" rel="noreferrer" class="white-font" target="_blank">
                   <i class="fab fa-twitter-square"></i>
+                  <span class="sr-only">Twitter</span>
                 </a>
               </li>
             </ul>

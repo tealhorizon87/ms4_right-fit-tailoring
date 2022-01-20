@@ -164,6 +164,10 @@ footer .row {
   min-height: 6rem;
 }
 
+.sr-only {
+  display: hidden;
+}
+
 /* --------------------------------------------Home page */
 .jumbotron {
   /* position: fixed; */
