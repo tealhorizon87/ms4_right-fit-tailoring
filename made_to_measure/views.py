@@ -60,7 +60,7 @@ def mtm_form(request, product_id):
             settings.DEFAULT_FROM_EMAIL,
             [user_email]
         )
-        messages.success(request, f"""
+        messages.info(request, f"""
             Your order has been submitted.
             One of our team will contact you shortly""")
 

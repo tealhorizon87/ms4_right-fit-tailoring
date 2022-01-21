@@ -19,7 +19,7 @@ def contact(request):
             [return_email],
         )
 
-        messages.success(request, "Your query has been sent")
+        messages.info(request, "Your query has been sent")
         return redirect(reverse("products"))
 
     return render(request, "contact/contact.html")
@@ -39,7 +39,7 @@ def alterations(request):
             [return_email],
         )
 
-        messages.success(request, "Your alteration request has been sent")
+        messages.info(request, "Your alteration request has been sent")
         return redirect(reverse("products"))
 
     return render(request, "contact/alterations.html")

@@ -61,7 +61,7 @@ def add_to_cart(request, item_id):
 
 def update_cart(request, item_id):
     """ A view to update the quantity of the same item to the cart """
-    
+
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get("quantity"))
     size = None
@@ -73,8 +73,7 @@ def update_cart(request, item_id):
         if quantity > 0:
             cart[item_id]["items_by_size"][size] = quantity
             messages.success(request, f"""
-                {product.name} in size {size.upper()} updated
-                """)
+                {product.name} in size {size.upper()} updated""")
         else:
             del cart[item_id]["items_by_size"][size]
             messages.success(request, f"""

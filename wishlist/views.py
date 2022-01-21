@@ -41,7 +41,7 @@ def add_to_wishlist(request, item_id):
         messages.info(request, "This item is already in your wishlist")
     else:
         wishlist.items.add(product)
-        messages.success(request, "Added product to your wishlist")
+        messages.info(request, "Added product to your wishlist")
 
     return redirect(redirect_url)
 
@@ -53,6 +53,6 @@ def remove_from_wishlist(request, item_id):
 
     wishlist.items.remove(product)
 
-    messages.success(request, "Item succeffully removed from wishlist")
+    messages.info(request, "Item succeffully removed from wishlist")
 
     return redirect(reverse("wishlist"))
