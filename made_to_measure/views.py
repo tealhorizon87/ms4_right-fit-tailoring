@@ -1,8 +1,11 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from products.models import Product, Category
 from django.contrib import messages
+from django.conf import settings
 from .forms import MtmForm
 from .models import MtmOrder
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 
 def made_to_measure(request):
@@ -29,7 +32,7 @@ def mtm_form(request, product_id):
     product = Product.objects.get(id=product_id)
 
     if request.method == "POST":
-        
+
         mtm_price = request.POST.get("mtm_price")
         form_data = {
             "order_total": mtm_price,
@@ -42,6 +45,21 @@ def mtm_form(request, product_id):
 
         form = MtmForm(form_data)
         form.save()
+
+        user_email = form_data["email"]
+        subject = render_to_string(
+            "made_to_measure/confirmation_emails/conf_email_subject.txt",
+            {"form": form_data})
+        body = render_to_string(
+            "made_to_measure/confirmation_emails/conf_email_body.txt",
+            {"form": form_data, "contact_email": settings.DEFAULT_FROM_EMAIL})
+
+        send_mail(
+            subject,
+            body,
+            settings.DEFAULT_FROM_EMAIL,
+            [user_email]
+        )
         messages.success(request, f"""
             Your order has been submitted.
             One of our team will contact you shortly""")

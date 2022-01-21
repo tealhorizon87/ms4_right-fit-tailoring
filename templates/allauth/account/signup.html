@@ -8,7 +8,7 @@
   <h2 class="logo-font mb-4">{% trans "Register" %}</h2>
   <hr>
 
-  <form class="signup mb-3" id="signup_form" method="POST" action="{% url 'account_signup' %}">
+  <form class="signup mb-5" id="signup_form" method="POST" action="{% url 'account_signup' %}">
     {% csrf_token %}
     {{ form|crispy }}
     {% if redirect_field_value %}

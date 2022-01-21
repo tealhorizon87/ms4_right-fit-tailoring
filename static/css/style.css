@@ -223,6 +223,11 @@ footer .row {
   margin-bottom: 1rem;
 }
 
+/* ---------------------------------------Profile Styles */
+.dark-font-hover:hover {
+  color: var(--my-dark-grey);
+}
+
 /* ----------------------------------------Media Queries */
 
 /* adjust the position of background image on medium and

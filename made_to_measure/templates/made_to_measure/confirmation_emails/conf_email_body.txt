@@ -1,0 +1,18 @@
+Hello {{ form.name }}!
+
+Thank you for your order from Right Fit Tailoring. Below is a summary of your order.
+
+Estimated cost: ${{ form.order_total }}
+
+Garment type: {{ form.garment }}
+Fabric choice: {{ form.product }}
+
+Someone from our made to measure department will contact you shortly at {{ form.email }} or by phone at {{ form.phone }} to discuss your order.
+
+If you have any questions, please contact us at {{contact_email}}.
+
+Thank you for your order!
+
+Sincerely,
+
+Right Fit Tailoring

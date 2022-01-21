@@ -57,7 +57,7 @@
                   {% for order in orders %}
                     <tr>
                       <td>
-                        <a class="dark_font" href="{% url 'order_history' order.order_number %}"
+                        <a class="dark-font-hover" href="{% url 'order_history' order.order_number %}"
                           title="{{ order.order_number }}">
                           {{ order.order_number|truncatechars:6 }}
                         </a>
