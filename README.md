@@ -170,8 +170,38 @@ I have gathered all my testing data, and stored it in a separate file, which can
 
 ### Known Bugs
 
+#### Name field in checkout doesn't pre-populate
+The first and last name of the user is not gathered by the registration form, and only by the social media sign up form. As there is no social media sign up currently for this page, this means that the 'name' field in the checkout app will never be pre-filled. This issue should be rectified if a social media sign up system is added.
+
 ## Deployment
 ### Heroku
+Deployment for this project is via [Heroku](https://www.heroku.com).
+1. Create a requirements.txt file by typing `pip3 freeze --local > requirements.txt` in your repository terminal
+2. Create a Procfile so that Heroku knows how to run the app, and write this line: `web: gunicorn right_fit_tailoring.wsgi:application`, making sure that there is no trailing whitespace
+3. Make sure these files have been pushed to the GitHub repository and then navigate to [Heroku](https://www.heroku.com)
+4. Log in and select 'new' in the top right, name your app and choose a region that is closest to you. The app name must be unique
+5. On the dashboard for your app, select the 'Deploy' tab and under deployment method, select GitHub (the easiest option if your repository is in GitHub)
+6. Enter the repository name underneath that and hit search. select the repository by clicking 'Connect'
+7. You can either select Automatic or Manual deployment depending on your method. Remember that if you choose manual, then every time the main/master branch is changed, you will need to re-deploy the app
+8. Go to the resources tab and add an instance of Heroku Postgres. You will need to add this to your django settings and migrate all the database info again
+9. Next, go to the 'Settings' tab and select 'Reveal Config Vars'
+10. Here you need to add several KEY: VALUE pairs for the app to run. They are
+  - For database and django:
+    - SECRET_KEY: *randomly generated secret key for example from https://miniwebtool.com/django-secret-key-generator/*
+    - DATABASE_URL: *the Postgres url from the settings section in the Postgres resource*
+  - For the AWS sections to work:
+    - AWS_ACCESS_KEY_ID: *access key from AWS account*
+    - AWS_SECRET_ACCESS_KEY: *this is found in the same location*
+    - USE_AWS: True *this makes sure that the static files are taken from the AWS host*
+  - For Stripe to work:
+    - STRIPE_PUBLIC_KEY: *found in your stripe account*
+    - STRIPE_SECRET_KEY: *found in your stripe account*
+    - STRIPE_WH_SECRET: *found in the stripe webhooks section once an endpoint has been made*
+  - For email sending to work:
+    - EMAIL_HOST_USER: *the email address associated with the account use want to use to send emails*
+    - EMAIL_HOST_PASS: *from your email provider*
+11. Add the Heroku app URL to the `ALLOWED_HOSTS` list in the settings file
+12. Once these KEY: VALUE pairs have been added, deploy the site manually to make sure the new config variables are loaded, and the site will be available from the 'Open app' button in the top right
 
 ### Forking the Repository
 If you would like to view/change the code for the project then you can copy this repository to your GitHub account by forking it. You will then be able to do this without affecting the original repository:
