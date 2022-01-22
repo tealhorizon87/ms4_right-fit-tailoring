@@ -56,7 +56,7 @@ The full table can be found [here](docs/docs/test-matrix.pdf).
 
 Any faults that were found have either been corrected or added to the 'known bugs' section in the README.
 
-The user authentication section has not been tested in this project as it has come directly from Django allauth and will have been thoroughly tested before release.
+The user authentication section has not been tested in this project as it has come directly from Django allauth and will have been thoroughly tested before release. Similarly. Stripe functionality has been tested in so much that orders are processed, caught by the webhooks, and stored in a correct manner. 
 
 Back to [Table of Contents](#table-of-contents)
 
@@ -123,8 +123,6 @@ Wish list app user stories:
       - __You can add items to the wish list from the product detail page, and remove them with the remove button on each item in the wish list__
     - be able to have more than one wish list at a time
       - __This is not currently possible, and while it would be a useful feature, it is not something that will be developed for this site at the moment__
-    - be able to see what the total cost of the items in the wish list is
-      - __Each item's price can be seen in the wish list, but there is no total value. This is due to the way that the wish list is designed__
     - be able to add items to the shopping cart directly from the wish list
       - __Each product in the wish list is displayed as a mini 'product detail' page. you can specify the quantity and size of each item in the wish list and add them to the shopping cart__
 

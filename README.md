@@ -56,7 +56,6 @@ Profile app user stories:
 Wish list app user stories:
   - As a registered user, I want to -
     - be able to add and remove items to a wish list
-    - be able to have more than one wish list at a time
     - be able to see what the total cost of the items in the wish list is
     - be able to add items to the shopping cart directly from the wish list
 
@@ -67,7 +66,10 @@ This application is an e-commerce store utilising the [Django](https://www.djang
   - The home app contains functionality for the home page, namely rendering the home page to users when they enter the site.
 
 #### Products
-  - The products app contains functionality concerning the products and how they are displayed to the user and the administrator. This app also contains the form for admin to add, edit or delete items from the site and all the functionality for the made to measure section as well.
+  - The products app contains functionality concerning the products and how they are displayed to the user.
+
+#### Made to Measure
+  - This app displays all material products so the user can choose one for their garment to be made from. It also contains the order form and order models associated with this function.
 
 #### Profiles
   - The profiles app displays the user's profile page once they have registered, the saved delivery and measurement details, and a list of the previous orders of the user. This app also contains the function to delete the user's profile when they wish it.
@@ -79,7 +81,7 @@ This application is an e-commerce store utilising the [Django](https://www.djang
   - The checkout app contains the forms and models required to create an order, both to be displayed to the user and to the administrator, all the stripe functionality to process payment and systems to protect that function.
 
 #### Wish list
-  - The wish list app allows users to set up ae wish list, add and remove items to said wish list, and display them back to the user.
+  - The wish list app allows users to set up a wish list, add and remove items to said wish list, and display them back to the user.
 
 <br>
 
@@ -135,8 +137,6 @@ Below is the link to a tabulated view of how the data is stored in the database.
     - Used to animate and control aspects of the pages that move
   - [Python](https://www.python.org/)
     - Used to connect the frontend application to the backend database, and to control the navigation and publication of the application
-  - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
-    - A templating language/engine used to simplify the page layouts and insert data from the database
 
 ### Libraries and Frameworks:
   - [Google Fonts](https://fonts.google.com/)
@@ -146,7 +146,7 @@ Below is the link to a tabulated view of how the data is stored in the database.
   - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
     - The main CSS library used to style the pages and make it responsive
   - [Django](https://www.djangoproject.com/)
-    - A full stack framework used facilitate the production of the application
+    - A full stack framework used facilitate the production of the application (see `requirements.txt` for a full list of dependencies)
 
 ### Tools:
   - [Atom](https://atom.io/) with [GitHub Desktop](https://desktop.github.com/)
@@ -235,6 +235,6 @@ Back to [Table of Contents](#table-of-contents)
 ### Acknowledgements
   - Thanks to my mentor for help, guidance and support during this project as always
   - [Stack Overflow](https://stackoverflow.com/) - much like w3schools, an essential source of guidance...there is always someone who has had the same problem, and the answer is likely here
-  - [Code Institute](https://codeinstitute.net/) - from inspiration through all the walkthrough projects to the tools needed to complete
+  - [Code Institute](https://codeinstitute.net/) - from inspiration through all the walkthrough projects to the tools needed to complete this project
 
 Back to [Table of Contents](#table-of-contents)
